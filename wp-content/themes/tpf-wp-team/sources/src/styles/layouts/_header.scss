@@ -1,0 +1,30 @@
+.header{
+    &__wrap{
+        @include breakpoint-up(md){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__menuWrap{
+        @include breakpoint-up(md){
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+    &__menu{
+        list-style-type: none;
+        @include breakpoint-up(md){
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li{
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

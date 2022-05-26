@@ -25,8 +25,8 @@ let plugins = [
         filename: 'css/styles.css'
     }),
     new BrowserSyncPlugin({
-        host: 'tpfthink.loc',
-        proxy: 'tpfthink.loc',
+        host: 'codesea.loc',
+        proxy: 'codesea.loc',
         port: 9000,
         //server: { baseDir: ['../dist'] },
         injectChanges: true,

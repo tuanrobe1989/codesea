@@ -7,9 +7,9 @@
 .container {
     width: 100%;
     box-sizing: border-box;
-    padding-left: rem(32px);
-    padding-right: rem(32px);
-    max-width: rem(1377px);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: rem(1232px);
     margin: 0 auto;
 
     @include breakpoint-up(md) {
