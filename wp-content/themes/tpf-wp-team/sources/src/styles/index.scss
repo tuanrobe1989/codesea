@@ -1,0 +1,23 @@
+@import "./base/fonts";
+@import "./base/mixins";
+@import "./base/common";
+@import "./layouts/header";
+@import "./layouts/footer";
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: rem(32px);
+    padding-right: rem(32px);
+    max-width: rem(1377px);
+    margin: 0 auto;
+
+    @include breakpoint-up(md) {
+        padding-left: rem(16px);
+        padding-right: rem(16px);
+    }
+}
+
+
+
+@import "./base/general";
