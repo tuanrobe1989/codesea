@@ -1,5 +1,6 @@
 <?php
 define('THEME_URL', get_stylesheet_directory_uri());
+define('SOURCE_URL', get_stylesheet_directory_uri().'/sources');
 define('BLOG_NAME', get_bloginfo('name'));
 define('BLOG_HOME', get_bloginfo('home'));
 add_filter('upload_mimes', 'my_myme_types', 1, 1);
