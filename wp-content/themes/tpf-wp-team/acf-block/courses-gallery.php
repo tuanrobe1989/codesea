@@ -13,7 +13,7 @@ if (!empty($block['align'])) {
 
 
 ?>
-<div id="<?php echo $id?>" class="courseGallery <?php echo esc_attr($classes); ?>">
+<div id="<?php echo $id?>" class="courseGallery__slider <?php echo esc_attr($classes); ?>">
     <?php
     if (have_rows('course_gallery')) :
     ?>
@@ -27,15 +27,9 @@ if (!empty($block['align'])) {
                 $link = get_sub_field('link') ? ' '.get_sub_field('link') : '#';
             ?>
                 <div class="courseGallery__item-<?php echo $i ?> courseGallery__item lazy" <?php echo $data ?>>
-                    <div class="container courseGallery__item__content">
-                        <div class="mw_888">
-                            <?php echo $title ?>
-                            <?php echo $description ?>
-                            <?php if ($button_text) : ?>
-                                <a href="<?php echo $link ?>" class="wp-block-button__link sg-popup-custom-01"><?php echo $button_text ?></a>
-                            <?php endif; ?>
-                        </div>
-                    </div>
+                    <a href="<?php echo $link ?>">
+                        <img src="<?php echo $image['url'] ?>" title="<?php echo $title ?>" alt="<?php echo $description ?>">
+                    </a>
                 </div>
             <?php
                 if(is_admin()):

@@ -345,13 +345,12 @@ img:not([src]) {
 }
 
 .payment__container {
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
 }
 .payment__title {
   color: #EB1F48;
-  font-weight: 700;
   text-align: center;
-  padding-bottom: 0.5rem;
+  padding-bottom: 2rem;
 }
 .payment__title::after {
   content: "";
@@ -365,14 +364,44 @@ img:not([src]) {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+@media (min-width: 992px) {
+  .payment__title::after {
+    width: 168px;
+    height: 7px;
+    bottom: -14px;
+  }
+}
 .payment__desc {
   text-align: center;
-  padding: 0 2rem 1rem 2rem;
+  padding: 0 0 1rem 0;
+  max-width: 286px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 992px) {
+  .payment__desc {
+    max-width: 740px;
+    padding: 0 0 2rem 0;
+  }
+}
+@media (min-width: 992px) {
+  .payment__imgWrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .payment__imgWrapper .wp-block-image {
   margin-bottom: 0;
 }
+.payment__imgLeft img {
+  display: block;
+  margin-left: auto;
+}
 
+.courseGallery__title {
+  color: #191D49;
+}
 .container {
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -403,6 +432,12 @@ body {
   font-size: 0.875rem;
   line-height: 1.375rem;
   color: #262626;
+}
+@media (min-width: 992px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
 
 /* GENERAL */
@@ -451,11 +486,12 @@ h2,
 .h2 {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 700;
 }
 @media (min-width: 992px) {
   h2,
 .h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     line-height: 2rem;
   }
 }
