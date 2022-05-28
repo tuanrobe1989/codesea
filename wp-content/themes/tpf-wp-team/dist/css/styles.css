@@ -245,24 +245,45 @@ img:not([src]) {
 .footer__quoteWrap {
   position: absolute;
   width: 100%;
-  top: -4rem;
+}
+@media (max-width: 991px) {
+  .footer__quoteWrap {
+    top: -2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .footer__quoteWrap {
+    top: -4rem;
+  }
 }
 .footer__quote {
   color: #FFFFFF;
-  padding: 2.5rem 3.5rem 1.5rem 7rem;
   border-radius: 10px;
-  font-size: 2rem;
   line-height: 1.1;
   font-weight: 700;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAA0CAMAAAAE725BAAAANlBMVEUAAAD////////////////////////////////////////////////////////////////////xY8b8AAAAEXRSTlMAfx8gEO/fv89vr58vX08/j5/Fa4MAAAD4SURBVEjH7dPRDoMgDAVQlAKCIvL/P7tski203NTXJdzH9uakc2qGOeK1uZUNQXPfnBxTTK6+oyIUw93kixI+Yx2hszUFkn0bawgt9w0SKY3QkdgIgVBqIxWxodYxcvj6EDldBUhmc4wssik2GMHNdmFFiDQQYt1T5KwQ8YOFCyQNO26CE1MhM8guhavcvNhcBL42QSwEeH8YkMCa2/r9ndwQZ6Bm+jUzM5quPxFP8MZsYDx8BSzjsVH6ZsCvT8RIZCfj9/jASOqbBFfO4Gz936usQBx8JMazFU7tsg9WOmIVZJyVIzATmchEJjKRifwfssBQjxBuvgC7S4z6tbB29gAAAABJRU5ErkJggg==) #EB1F48 no-repeat left 2rem top 1rem;
+  background-color: #EB1F48;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAA0CAMAAAAE725BAAAANlBMVEUAAAD////////////////////////////////////////////////////////////////////xY8b8AAAAEXRSTlMAfx8gEO/fv89vr58vX08/j5/Fa4MAAAD4SURBVEjH7dPRDoMgDAVQlAKCIvL/P7tski203NTXJdzH9uakc2qGOeK1uZUNQXPfnBxTTK6+oyIUw93kixI+Yx2hszUFkn0bawgt9w0SKY3QkdgIgVBqIxWxodYxcvj6EDldBUhmc4wssik2GMHNdmFFiDQQYt1T5KwQ8YOFCyQNO26CE1MhM8guhavcvNhcBL42QSwEeH8YkMCa2/r9ndwQZ6Bm+jUzM5quPxFP8MZsYDx8BSzjsVH6ZsCvT8RIZCfj9/jASOqbBFfO4Gz936usQBx8JMazFU7tsg9WOmIVZJyVIzATmchEJjKRifwfssBQjxBuvgC7S4z6tbB29gAAAABJRU5ErkJggg==);
+}
+@media (max-width: 991px) {
+  .footer__quote {
+    font-size: 1rem;
+    padding: 1.6rem 1rem 1.5rem 4rem;
+    background-position: left 1rem top 1rem;
+    background-size: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .footer__quote {
+    font-size: 2rem;
+    padding: 2.5rem 3.5rem 1.5rem 7rem;
+    background-position: left 2rem top 1rem;
+  }
 }
 .footer__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -274,20 +295,49 @@ img:not([src]) {
 @media (min-width: 992px) {
   .footer__row {
     margin-top: 3rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
-.footer__row__item {
-  width: 50%;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+@media (max-width: 991px) {
+  .footer__row__item {
+    width: 100%;
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .footer__row__item {
+    width: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+@media (max-width: 991px) {
+  .footer__itemLeft {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 .footer__itemLeft__logoWrap {
   width: 100%;
   float: both;
   display: block;
 }
+@media (max-width: 991px) {
+  .footer__itemLeft__logoWrap {
+    position: absolute;
+    top: 4.2rem;
+  }
+}
 .footer__itemLeft__logo {
   height: auto;
+}
+@media (max-width: 991px) {
+  .footer__itemLeft__logo {
+    margin-left: 1rem;
+  }
 }
 .footer__itemLeft__row {
   display: -webkit-box;
@@ -295,13 +345,27 @@ img:not([src]) {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  float: right;
-  clear: both;
   width: 100%;
-  max-width: 25rem;
+}
+@media (min-width: 992px) {
+  .footer__itemLeft__row {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    float: right;
+    clear: both;
+    max-width: 25rem;
+  }
+}
+@media (max-width: 991px) {
+  .footer__itemLeft__item {
+    width: 100%;
+  }
+  .footer__itemLeft__item.left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 .footer__itemLeft__item--topColor a {
   color: #EB1F48 !important;
@@ -324,6 +388,15 @@ img:not([src]) {
 }
 .footer__itemRight {
   text-align: right;
+}
+@media (max-width: 991px) {
+  .footer__itemRight {
+    padding-top: 5rem;
+  }
+}
+.footer__itemRight--img {
+  height: auto;
+  max-width: 100%;
 }
 
 .icon {
@@ -371,6 +444,10 @@ img:not([src]) {
 }
 .payment__imgWrapper .wp-block-image {
   margin-bottom: 0;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 .container {

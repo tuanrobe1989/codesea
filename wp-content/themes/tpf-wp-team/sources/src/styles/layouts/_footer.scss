@@ -13,63 +13,110 @@
     &__quoteWrap {
         position: absolute;
         width: 100%;
-        top: -4rem;
+        @include breakpoint-down(md) {
+            top: -2.5rem;
+        }
+        @include breakpoint-up(md) {
+            top: -4rem;
+        }
     }
 
     &__quote {
         color: $white;
-        padding: 2.5rem 3.5rem 1.5rem 7rem;
         border-radius: 10px;
-        font-size: 2rem;
         line-height: 1.1;
         font-weight: 700;
-        background: url('~images/icon-quite.png') $color2 no-repeat left 2rem top 1rem;
+        background-color: $color2;
+        background-repeat: no-repeat;
+        background-image:  url('~images/icon-quite.png');
+        @include breakpoint-down(md) {
+            font-size: 1rem;
+            padding: 1.6rem 1rem 1.5rem 4rem;
+            background-position: left 1rem top 1rem;
+            background-size: 2rem;
+        }
+        @include breakpoint-up(md) {
+            font-size: 2rem;
+            padding: 2.5rem 3.5rem 1.5rem 7rem;
+            background-position: left 2rem top 1rem;
+        }
     }
 
     &__row {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
-
         @include breakpoint-down(md) {
             margin-top: 2rem;
         }
 
         @include breakpoint-up(md) {
             margin-top: 3rem;
+            
+            justify-content: space-between;
+           
         }
 
         &__item {
-            width: 50%;
-            flex-basis: 50%;
-            
+            @include breakpoint-down(md) {
+                width: 100%;
+                display: block;
+            }
+
+            @include breakpoint-up(md) {
+                width: 50%;
+                flex-basis: 50%;
+            }
         }
     }
 
     &__itemLeft {
+        @include breakpoint-down(md) {
+            order: 2;
+        }
         &__logoWrap {
             width: 100%;
             float: both;
             display: block;
+            @include breakpoint-down(md) {
+                position: absolute;
+                top: 4.2rem;
+            }
         }
 
         &__logo {
             height: auto;
+            @include breakpoint-down(md) {
+                margin-left: 1rem;
+            }
         }
 
         &__row {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            float: right;
-            clear: both;
             width: 100%;
-            max-width: 25rem;
-            
+            @include breakpoint-down(md) {
+
+            }
+            @include breakpoint-up(md) {
+               
+                justify-content: space-between;
+                float: right;
+                clear: both;
+                
+                max-width: 25rem;
+            }
+
         }
-        &__item{
-            &--topColor{
-                a{
+
+        &__item {
+            @include breakpoint-down(md) {
+                width: 100%;
+                &.left{
+                    order: 2;
+                }
+            }
+            &--topColor {
+                a {
                     color: $color2 !important;
                     font-weight: 900;
                 }
@@ -86,7 +133,8 @@
                     padding-top: 0.5rem;
                     padding-bottom: 0.5rem;
                     display: block;
-                    &.icon--phone{
+
+                    &.icon--phone {
                         color: $color2;
                         font-size: 1.2rem;
                         font-weight: 900;
@@ -98,6 +146,14 @@
 
     &__itemRight {
         text-align: right;
+        @include breakpoint-down(md) {
+            padding-top: 5rem;
+        }
+
+        &--img {
+            height: auto;
+            max-width: 100%;
+        }
     }
 }
 

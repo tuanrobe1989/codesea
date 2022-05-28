@@ -19,12 +19,12 @@
                     <img src="<?php echo SOURCE_URL ?>/images/logo.png" width="170" height="186" alt="<?php echo BLOG_NAME ?>" title="<?php echo BLOG_NAME ?>" class="footer__itemLeft__logo" />
                 </a>
                 <div class="footer__itemLeft__row">
-                    <ul class="footer__itemLeft__item">
+                    <ul class="footer__itemLeft__item left">
                         <li><a href="tel:0939756991" class="icon icon--phone">0939 756 991</a></li>
                         <li><a href="mailto:info@codesea.edu.vn" class="icon icon--mail">info@codesea.edu.vn</a></li>
                         <li><a href="#" class="icon icon--address">Quận 7, Hồ Chí Minh</a></li>
                     </ul>
-                    <nav class="footer__itemLeft__item">
+                    <nav class="footer__itemLeft__item right">
                         <ul>
                             <li class="footer__itemLeft__item--topColor"><a href="#">Về chúng tôi</a></li> 
                             <li><a href="#">About CodeSea Academy</a></li> 
