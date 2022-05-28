@@ -1,0 +1,32 @@
+.payment {
+  &__container {
+    padding-bottom:0.8rem;
+  }
+  &__title {
+    color: $color2;
+    font-weight:700;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    &::after {
+      content: '';
+      display: block;
+      width: 81px;
+      height:3px;
+      background-color: $color1;
+      position: relative;
+      left:50%;
+      bottom: -8px;
+      transform: translateX(-50%);
+    }
+  }
+  &__desc {
+    text-align: center;
+    padding: 0 2rem 1rem 2rem;
+  }
+  &__imgWrapper {
+    .wp-block-image {
+      margin-bottom: 0;
+    }
+  }
+}
+

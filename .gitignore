@@ -1,4 +1,7 @@
 wp-config.php
 /node_modules/
 
+wp-content/themes/tpf-wp-team/dist/css/
+wp-content/themes/tpf-wp-team/dist/js/
+wp-content/themes/tpf-wp-team/dist/
 note.txt
