@@ -15,7 +15,7 @@
     <header class="header">
         <div class="container header__wrap">
             <a href="<?php echo BLOG_HOME ?>" title="<?php echo BLOG_NAME ?>" class="header__logo">
-                <img src="<?php echo THEME_URL ?>/sources/images/logo.png" title="<?php echo BLOG_NAME ?>" alt="<?php echo BLOG_NAME ?>" />
+                <img src="<?php echo THEME_URL ?>/sources/images/logo.png" width="131" height="54" title="<?php echo BLOG_NAME ?>" alt="<?php echo BLOG_NAME ?>" />
             </a>
             <div class="header__menuWrap">
                 <?php

@@ -1,0 +1,123 @@
+.footer {
+    background: $color3;
+    position: relative;
+
+    @include breakpoint-down(md) {
+        padding: 3rem 0;
+    }
+
+    @include breakpoint-up(md) {
+        padding: 4rem 0;
+    }
+
+    &__quoteWrap {
+        position: absolute;
+        width: 100%;
+        top: -4rem;
+    }
+
+    &__quote {
+        color: $white;
+        padding: 2.5rem 3.5rem 1.5rem 7rem;
+        border-radius: 10px;
+        font-size: 2rem;
+        line-height: 1.1;
+        font-weight: 700;
+        background: url('~images/icon-quite.png') $color2 no-repeat left 2rem top 1rem;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include breakpoint-down(md) {
+            margin-top: 2rem;
+        }
+
+        @include breakpoint-up(md) {
+            margin-top: 3rem;
+        }
+
+        &__item {
+            width: 50%;
+            flex-basis: 50%;
+            
+        }
+    }
+
+    &__itemLeft {
+        &__logoWrap {
+            width: 100%;
+            float: both;
+            display: block;
+        }
+
+        &__logo {
+            height: auto;
+        }
+
+        &__row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            float: right;
+            clear: both;
+            width: 100%;
+            max-width: 25rem;
+            
+        }
+        &__item{
+            &--topColor{
+                a{
+                    color: $color2 !important;
+                    font-weight: 900;
+                }
+            }
+        }
+
+        ul {
+            list-style-type: none;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: $color1;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    display: block;
+                    &.icon--phone{
+                        color: $color2;
+                        font-size: 1.2rem;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+
+    &__itemRight {
+        text-align: right;
+    }
+}
+
+.icon {
+    padding-left: 2.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-position: center left;
+    background-repeat: no-repeat;
+    display: block;
+
+    &--phone {
+        background-image: url(~images/icon-phone-pink.png);
+    }
+
+    &--mail {
+        background-image: url(~images/icon-mail-pink.png);
+    }
+
+    &--address {
+        background-image: url(~images/icon-map-pink.png);
+    }
+}
