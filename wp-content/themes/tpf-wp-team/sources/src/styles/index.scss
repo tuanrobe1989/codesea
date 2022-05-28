@@ -4,6 +4,9 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 
+//Blocks
+@import "./blocks/payment";
+
 .container {
     width: 100%;
     box-sizing: border-box;
