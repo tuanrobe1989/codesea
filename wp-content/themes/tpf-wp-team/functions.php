@@ -1,4 +1,6 @@
 <?php
+//Require Blocks
+require_once('acf-block/acf-blocks.php');
 define('THEME_URL', get_stylesheet_directory_uri());
 define('SOURCE_URL', get_stylesheet_directory_uri().'/sources');
 define('BLOG_NAME', get_bloginfo('name'));
