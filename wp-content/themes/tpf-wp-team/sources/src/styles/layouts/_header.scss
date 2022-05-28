@@ -14,16 +14,27 @@
             justify-content: flex-end;
         }
     }
+    &__logo{
+        @include breakpoint-up(md){
+            margin-right: 2.5rem;
+        }
+    }
     &__menu{
         list-style-type: none;
+        background-color: $color3;
         @include breakpoint-up(md){
             display: flex;
             flex-wrap: wrap;
+            padding: 1rem 0;
+            flex-grow: 1;
+            justify-content: right;
         }
         li{
             a{
                 text-decoration: none;
                 text-transform: uppercase;
+                color: $color1;
+                padding: 0.5rem rem(27px);
             }
         }
     }

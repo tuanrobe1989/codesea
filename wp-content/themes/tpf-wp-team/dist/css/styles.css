@@ -161,8 +161,14 @@ img:not([src]) {
             justify-content: flex-end;
   }
 }
+@media (min-width: 992px) {
+  .header__logo {
+    margin-right: 2.5rem;
+  }
+}
 .header__menu {
   list-style-type: none;
+  background-color: #F4F7FC;
 }
 @media (min-width: 992px) {
   .header__menu {
@@ -171,11 +177,20 @@ img:not([src]) {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 1rem 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
   }
 }
 .header__menu li a {
   text-decoration: none;
   text-transform: uppercase;
+  color: #191D49;
+  padding: 0.5rem 1.6875rem;
 }
 
 .container {
