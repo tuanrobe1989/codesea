@@ -140,9 +140,6 @@ img:not([src]) {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 @media (min-width: 992px) {
@@ -156,9 +153,6 @@ img:not([src]) {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
   }
 }
 @media (min-width: 992px) {
@@ -184,6 +178,11 @@ img:not([src]) {
     -webkit-box-pack: right;
         -ms-flex-pack: right;
             justify-content: right;
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .header__menu li.current-menu-item a {
@@ -201,6 +200,32 @@ img:not([src]) {
   background-color: #EB1F48;
   color: #FFFFFF !important;
   border-radius: 5px;
+}
+.header__hotline {
+  background-color: #F4F7FC;
+  padding: 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+.header__hotline--button {
+  background-color: #EB1F48;
+  color: #FFFFFF;
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  border-radius: 10px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAMAAADX9CSSAAAANlBMVEUAAAD////////////////////////////////////////////////////////////////////xY8b8AAAAEXRSTlMAH7/PP98Qf2CPMG+vUJ9P70FreAUAAADMSURBVCjPTZBblsQgCETDS9BoZtz/Zlug28iHHi9VpXhllbuTiKDBdZaKNt+bSS2bAul7uAU25tML+G3IgSOMwq36A3+EFlE1bFtoDD1EbjB18l9d/wj04YbFelueOSdfjNywuN0Xcfni6hdy5biUkuuc5I9jHDqcIwRnj/G6fUlOMcKs5wQOY7qx8n2DxIWWNbx1Ndpa0mZP9LKRBRnv5E6NOK4pz7BvqmG380NbNHbB/t+G9mImfiUPjnwgY4QcHUHsRJVPmlqA8p4+reYGKw2BpO0AAAAASUVORK5CYII=);
+  background-position: center left 0.8rem;
+  background-repeat: no-repeat;
+  background-size: 26px;
+  line-height: 1.3;
+  font-size: 0.75rem;
+}
+.header__hotline--button tel {
+  font-weight: 900;
+  font-size: 0.875rem;
 }
 
 .container {

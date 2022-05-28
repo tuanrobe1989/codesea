@@ -28,6 +28,10 @@
                 );
                 ?>
             </div>
-            <a href="tel:0939756991" title="<?php echo BLOG_NAME ?> - Hotline">Hotline:<br>0939 756 991</a>
+            <div class="header__hotline">
+            <a href="tel:0939756991" title="<?php echo BLOG_NAME ?> - Hotline" class="header__hotline--button">
+                Hotline:<br><tel>0939 756 991</tel>
+            </a>
+            </div>
         </div>
     </header>
