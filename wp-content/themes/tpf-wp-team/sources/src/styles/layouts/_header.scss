@@ -30,11 +30,18 @@
             justify-content: right;
         }
         li{
+            &.current-menu-item{
+                a{
+                    font-weight: 900;
+                    color: $color2;
+                }
+            }
             a{
                 text-decoration: none;
                 text-transform: uppercase;
                 color: $color1;
                 padding: 0.5rem rem(27px);
+                font-size: rem(12px);
             }
         }
     }

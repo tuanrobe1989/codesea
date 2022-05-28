@@ -186,11 +186,16 @@ img:not([src]) {
             justify-content: right;
   }
 }
+.header__menu li.current-menu-item a {
+  font-weight: 900;
+  color: #EB1F48;
+}
 .header__menu li a {
   text-decoration: none;
   text-transform: uppercase;
   color: #191D49;
   padding: 0.5rem 1.6875rem;
+  font-size: 0.75rem;
 }
 
 .container {
