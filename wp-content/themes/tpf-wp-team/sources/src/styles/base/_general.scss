@@ -12,6 +12,10 @@ body {
     font-size: rem(14px);
     line-height: rem(22px);
     color: $color4;
+    @include breakpoint-up(md) {
+        font-size: rem(16px);
+        line-height: rem(22px);
+    }
 }
 
 /* GENERAL */
@@ -62,7 +66,7 @@ h2,
     line-height: rem(32px);
 
     @include breakpoint-up(md) {
-        font-size: rem(28px);
+        font-size: rem(32px);
         line-height: rem(32px);
     }
 }
