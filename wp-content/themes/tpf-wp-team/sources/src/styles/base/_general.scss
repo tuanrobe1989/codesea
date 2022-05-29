@@ -43,14 +43,14 @@ strong {
  
 h1,
 .h1 {
-    font-size: rem(25px);
-    line-height: rem(30px);
-    font-weight: 7 00;
+    font-size: rem(35px);
+    line-height: rem(42px);
+    font-weight: 700 !important;
     color: $color1;
 
     @include breakpoint-up(md) {
-        font-size: rem(35px);
-        line-height: rem(42px);
+        font-size: rem(25px);
+        line-height: rem(30px);
     }
 }
 
@@ -62,12 +62,12 @@ h1,
 
 h2,
 .h2 {
-    font-size: rem(20px);
-    line-height: rem(24px);
+    font-size: 2rem;
+    line-height: rem(38.4px);
     font-weight:700;
     @include breakpoint-up(md) {
-        font-size: rem(32px);
-        line-height: rem(38.4px);
+        font-size: rem(20px);
+        line-height: rem(24px);
     }
 }
 
@@ -75,12 +75,12 @@ h2,
 h3,
 .h3,
 .note {
-    font-size: rem(16px);
-    line-height: rem(19.2px);
-    font-weight: 700;
+    font-size: rem(26px);
+    line-height: rem(31.2px);
+
     @include breakpoint-up(md) {
-        font-size: rem(26px);
-        line-height: rem(31.2px);
+        font-size: rem(16px);
+        line-height: rem(19.2px);
     }
 }
 

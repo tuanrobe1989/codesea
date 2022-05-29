@@ -2,7 +2,12 @@
     padding: 9rem 0 3rem 0;
     position: relative;
     overflow: hidden;
-
+    @include breakpoint-down(md) {
+        padding: 9rem 0 1.5rem 0;
+    }
+    @include breakpoint-up(md) {
+        padding: 9rem 0 3rem 0;
+    }
     &::after {
 
         @include breakpoint-up(md) {
@@ -30,9 +35,16 @@
         align-items: center !important;
     }
 
-    &__img {}
+    &__img {
+
+    }
 
     &__content {
+        &--tit{
+            img{
+                max-width: 70%;
+            }
+        }
         &__des {
             max-width: 460px;
             line-height: 1.5;
