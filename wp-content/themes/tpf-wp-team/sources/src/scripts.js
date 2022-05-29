@@ -139,28 +139,31 @@ jQuery(document).ready(function ($) {
             .append(jQuery("<style type='text/css'>  .label{color: red !important}  </style>"));
     });
 
-    if (jQuery('.owl-carousel').length > 0) {
-        jQuery('.owl-carousel').each(function (index, item) {
-            var oc = $(this);
-            var options = {
-                items: oc.data('items') || 1,
-                loop: oc.data('loop') === true ? true : false,
-                margin: oc.data('margin') || 0,
-                dots: oc.data('dots') === false ? false : true,
-                nav: oc.data('nav') === true ? true : false,
-                responsive: {
-                    580: {
-                        items: oc.data('items-580') || 1
-                    },
-                    992: {
-                        items: oc.data('items-992') || 1
-                    },
-                    1024: {
-                        items: oc.data('items-1024') || 1
-                    }
+    if (jQuery('#courseGallery').length > 0) {
+        $('#courseGallery').owlCarousel({
+            lazyLoad: true,
+            nav:true,
+            // center:true,
+            autoWidth:true,
+            // margin: 0,
+            loop: true,
+            mouseDrag: true,
+            dots:false,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:2,                
                 },
+                767:{
+                    items:3,                
+                },
+                980:{
+                    items:4,                
+                },
+                1199:{
+                    items:5,                
+                }
             }
-            oc.owlCarousel(options);
         });
     }
 });

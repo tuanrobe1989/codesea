@@ -62,12 +62,12 @@ h1,
 
 h2,
 .h2 {
-    font-size: rem(24px);
-    line-height: rem(32px);
+    font-size: rem(20px);
+    line-height: rem(24px);
     font-weight:700;
     @include breakpoint-up(md) {
         font-size: rem(32px);
-        line-height: rem(32px);
+        line-height: rem(38.4px);
     }
 }
 

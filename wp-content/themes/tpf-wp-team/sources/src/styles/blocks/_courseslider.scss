@@ -1,14 +1,55 @@
 .courseGallery {
   &__container {
-
+    padding-bottom:0.8rem;
+    @include breakpoint-up(md) {
+      padding-bottom:3rem;
+    }
   }
   &__title {
     color: $color1;
+    text-align: center;
+    padding-bottom: 0.8rem;
   }
   &__slider {
   
   }
   &__item {
-  
+    max-width: 312px;
+    @include breakpoint-up(md) {
+      max-width: 358px;      
+    }
+  }
+}
+
+#courseGallery {
+  position: relative;
+  .owl-nav {
+    position: absolute;
+    width: 100%;
+    height:1px;
+    top: 42%;
+    left: 0;
+    right: 0;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 342px;
+    @include breakpoint-up(md) {
+      max-width: 1224px;      
+    }
+    
+    button {
+      background-color: $gray_transparent;
+      width: 38px;
+      height: 38px;
+      border-radius:50%;
+      span {
+        position:relative;
+        top:-2px;
+        display: block;
+        font-size:38px;
+        line-height:38px;
+      }
+    }
   }
 }

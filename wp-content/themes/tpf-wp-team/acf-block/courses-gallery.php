@@ -17,7 +17,7 @@ if (!empty($block['align'])) {
     <?php
     if (have_rows('course_gallery')) :
     ?>
-        <div class="owl-carousel owl-theme" data-dots="false">
+        <div id="courseGallery" class="owl-carousel owl-theme">
             <?php
             $i = 0;
             while (have_rows('course_gallery')) : the_row(); $i++;

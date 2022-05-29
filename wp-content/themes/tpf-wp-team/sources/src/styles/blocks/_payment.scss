@@ -1,6 +1,9 @@
 .payment {
   &__container {
-    padding-bottom:0.4rem;
+    padding-bottom:0.2rem;
+    @include breakpoint-up(md) {
+      padding-bottom:3rem;
+    }
   }
   &__title {
     color: $color2;
