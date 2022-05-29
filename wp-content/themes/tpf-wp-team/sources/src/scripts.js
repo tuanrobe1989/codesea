@@ -12,12 +12,13 @@ var lazyLoadInstance = new LazyLoad({
 });
 
 var tpfObjects = {};
-tpfObjects.hemhamburger = function () {
-    jQuery('.hemhamburger').click(function () {
+tpfObjects.hamb = function () {
+    jQuery('.hamb').click(function () {
         jQuery(this).toggleClass('actived');
-        jQuery('.header__menuWrap').toggleClass('actived');
+        jQuery('.header').toggleClass('actived');
     })
 }
+
 tpfObjects.faqItem = function () {
     if (jQuery('.faqItem').length > 0) {
         jQuery('.faqItem__title').click(function () {
@@ -116,7 +117,7 @@ function handler(e) {
 
 jQuery(document).ready(function ($) {
     MatchHeight.init();
-    tpfObjects.hemhamburger();
+    tpfObjects.hamb();
     tpfObjects.faqItem();
     tpfObjects.tabsContent();
 
