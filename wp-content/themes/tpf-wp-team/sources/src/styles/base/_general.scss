@@ -12,6 +12,7 @@ body {
     font-size: rem(14px);
     line-height: rem(22px);
     color: $color4;
+
     @include breakpoint-up(md) {
         font-size: rem(16px);
         line-height: rem(22px);
@@ -43,14 +44,17 @@ strong {
 
 h1,
 .h1 {
-    font-size: rem(35x);
-    line-height: rem(42px);
     font-weight: 700 !important;
     color: $color1;
 
-    @include breakpoint-up(md) {
+    @include breakpoint-down(md) {
         font-size: rem(25);
         line-height: rem(30px);
+    }
+
+    @include breakpoint-up(md) {
+        font-size: rem(35x);
+        line-height: rem(42px);
     }
 }
 
@@ -62,12 +66,16 @@ h1,
 
 h2,
 .h2 {
-    font-size: 2rem;
-    line-height: rem(38.4px);
-    font-weight:700;
-    @include breakpoint-up(md) {
+    font-weight: 700;
+
+    @include breakpoint-down(md) {
         font-size: rem(20px);
         line-height: rem(24px);
+    }
+
+    @include breakpoint-up(md) {
+        font-size: 2rem;
+        line-height: rem(38.4px);
     }
 }
 
@@ -75,22 +83,28 @@ h2,
 h3,
 .h3,
 .note {
-    font-size: rem(26px);
-    line-height: rem(31.2px);
+    font-weight: 700;
 
-    @include breakpoint-up(md) {
+    @include breakpoint-down(md) {
         font-size: rem(16px);
         line-height: rem(19.2px);
+    }
+
+    @include breakpoint-up(md) {
+        font-size: rem(26px);
+        line-height: rem(31.2px);
     }
 }
 
 h4,
 .h4 {
-    font-size: rem(15px);
-    line-height: rem(22px);
+    @include breakpoint-down(md) {
+        font-size: rem(16px);
+        line-height: rem(19.2px);
+    }
 
     @include breakpoint-up(md) {
-        font-size: rem(16px);
+        font-size: rem(20);
         line-height: rem(24px);
     }
 }
@@ -283,4 +297,8 @@ h5,
         padding-left: 1rem;
         padding-right: 1rem;
     }
+}
+
+.uppercase {
+    text-transform: uppercase;
 }

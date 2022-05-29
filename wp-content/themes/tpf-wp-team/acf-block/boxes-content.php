@@ -37,15 +37,23 @@ $template = array(
                 array(
                     array('core/column', array(
                         'className' => 'boxesContent__item'
+                    ),array(
+                        array('core/image')
                     )),
                     array('core/column', array(
                         'className' => 'boxesContent__item'
+                    ),array(
+                        array('core/image')
                     )),
                     array('core/column', array(
                         'className' => 'boxesContent__item'
+                    ),array(
+                        array('core/image')
                     )),
                     array('core/column', array(
                         'className' => 'boxesContent__item'
+                    ),array(
+                        array('core/image')
                     )),
                 )
             ),
