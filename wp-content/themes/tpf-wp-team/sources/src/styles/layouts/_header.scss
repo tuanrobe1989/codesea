@@ -8,6 +8,7 @@
     position: fixed;
     top: 1.4em;
     right: 1rem;
+    z-index: 9;
     @include breakpoint-up(md) {
         display: none;
     }
@@ -53,6 +54,7 @@
     width: 100%;
     left: 0;
     padding: 1rem  0 0 0;
+    z-index: 9;
 
     @include breakpoint-down(md) {
         height: 100%;
