@@ -114,6 +114,10 @@
                 &.left{
                     order: 2;
                 }
+                &.right{
+                    margin-top: 0.5rem;
+                    margin-bottom: 1rem;
+                }
             }
             &--topColor {
                 a {
