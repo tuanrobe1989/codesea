@@ -1,0 +1,93 @@
+.intro {
+  background-image: url(~images/intro-bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position:top left;
+  background-size: cover;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position:relative;
+  @include breakpoint-up(md) {
+    background-image: url(~images/introBg.png);
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 28px;
+
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $back_transparent;
+    z-index:0;
+  }
+
+  &__container {
+    position:relative;
+    z-index:1;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $white;
+    @include breakpoint-up(md) {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__contentWrapper {
+    color: $white;
+    @include breakpoint-up(md) {
+      flex-wrap: wrap !important;
+      gap: 0 !important;      
+    }
+  }
+
+  &__content__item {
+    position:relative;
+    padding-left:60px;
+    @include breakpoint-up(md) {
+      width:50%;
+      flex-basis: 50% !important;
+      flex-grow: 0 !important;
+      box-sizing: border-box;
+      padding-left: 16%;
+      padding-right: 4%;
+      padding-bottom: 4%;
+    }
+  }
+
+  &__content__itemIcon {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 45px;
+    height: 45px;
+    @include breakpoint-up(md) {
+      width: 147px;
+      height: 147px;      
+    }
+  }
+
+  &__content__itemTitle {
+    color: $color6;
+    margin-top:5px;
+  }
+
+  &__content__itemList {
+    padding-left: 12px;
+    @include breakpoint-up(md) {
+      padding-left: 12px;
+    }
+    li {
+      text-align: justify;
+      margin-bottom: 10px;
+    }
+  }
+
+}
+

@@ -41,9 +41,11 @@ h6 {
 strong {
     font-weight: 500;
 }
-
+ 
 h1,
 .h1 {
+    font-size: rem(35px);
+    line-height: rem(42px);
     font-weight: 700 !important;
     color: $color1;
 
