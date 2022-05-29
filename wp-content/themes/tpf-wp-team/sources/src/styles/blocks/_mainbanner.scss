@@ -1,0 +1,51 @@
+.mainbanner {
+    padding: 9rem 0 3rem 0;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+
+        @include breakpoint-up(md) {
+            content: '';
+            display: block;
+            height: 100%;
+            right: 0;
+            top: 0;
+            width: 50%;
+            position: absolute;
+            background-image: url(~images/banner-bg.png);
+            background-repeat: no-repeat;
+            background-position: center left;
+            background-size: contain;
+            z-index: 0;
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &Wrap {
+        align-items: center !important;
+    }
+
+    &__img {}
+
+    &__content {
+        &__des {
+            max-width: 460px;
+            line-height: 1.5;
+
+            &::before {
+                content: '';
+                display: block;
+                height: 6px;
+                width: 100%;
+                max-width: 175px;
+                background-color: $color1;
+                margin: 1.7rem 0 1.5rem 0;
+            }
+        }
+    }
+}
