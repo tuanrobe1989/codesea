@@ -9,17 +9,14 @@ if (!empty($block['align'])) {
 
 $template = array(
     array('core/columns', array(
-            'className' => 'mainbannerWrap',
+            'className' => 'boxesContentWrap',
         ), array(
         array('core/column', array(
-            'className' => 'mainbanner__content'
+            'className' => 'boxesContent__content'
         ), array(
-            array('core/image', array(
-                'className' => 'mainbanner__content--tit'
-            )),
             array(
                 'core/group', array(
-                    'className' => 'mainbanner__content__des'
+                    'className' => 'boxesContent__content__des'
                 ),
                 array(
                     array('core/paragraph', array(
@@ -27,11 +24,31 @@ $template = array(
                     )),
                 )
             ),
+            array('core/image', array(
+                'className' => 'boxesContent__content--img'
+            )),
         )),
         array('core/column', array(
-            'className' => ' '
+            'className' => 'boxesContent__items'
         ), array(
-            array('core/image', array()),
+            array('core/columns', array(
+                'className' => 'boxesContent__itemsWrap'
+            ),
+                array(
+                    array('core/column', array(
+                        'className' => 'boxesContent__item'
+                    )),
+                    array('core/column', array(
+                        'className' => 'boxesContent__item'
+                    )),
+                    array('core/column', array(
+                        'className' => 'boxesContent__item'
+                    )),
+                    array('core/column', array(
+                        'className' => 'boxesContent__item'
+                    )),
+                )
+            ),
         )),
     ))
 );
@@ -43,7 +60,7 @@ $no_image = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICT
 
 
 ?>
-<div id="mainbanner-<?php echo $block['id'] ?>" class="mainbanner<?php if($className ) echo ' '. $className ?>">
+<div id="boxesContent-<?php echo $block['id'] ?>" class="boxesContent<?php if($className ) echo ' '. $className ?>">
     <div class="container">
         <InnerBlocks template="<?php echo esc_attr(wp_json_encode($template)); ?>" allowedBlocks="<?php echo esc_attr(wp_json_encode($allowed_blocks)) ?>" />
     </div>

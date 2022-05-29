@@ -35,7 +35,7 @@ function mainbanner()
         // register a testimonial block.
         acf_register_block_type(array(
             'name'              => 'mainbanner',
-            'title'             => __('Mainbanner', 'infinit'),
+            'title'             => __('Mainbanner', 'codesea'),
             'description'       => __('Mainbanner Blocks Develop By KenLuu.'),
             'render_template'   => './acf-block/mainbanner.php',
             'category'          => 'formatting',
@@ -43,6 +43,31 @@ function mainbanner()
             'keywords'          => array('mainbanner'),
             // 'mode'              => 'preview',
             // 'parent'            => array('tabs_group','quote'),
+            'supports'          => array(
+                'align' => true,
+                'mode' => true,
+                'jsx' => true,
+                'multiple' => true,
+            ),
+        ));
+    }
+}
+
+add_action('acf/init', 'boxesContent');
+function boxesContent()
+{
+    // Check function exists.
+    if (function_exists('acf_register_block_type')) {
+
+        // register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'boxesContent',
+            'title'             => __('Boxes Content', 'codesea'),
+            'description'       => __('Boxes Content Blocks Develop By KenLuu.'),
+            'render_template'   => './acf-block/boxes-content.php',
+            'category'          => 'formatting',
+            'icon'              => 'tickets-alt',
+            'keywords'          => array('boxesContent'),
             'supports'          => array(
                 'align' => true,
                 'mode' => true,
