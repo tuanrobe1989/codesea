@@ -40,17 +40,17 @@ h6 {
 strong {
     font-weight: 500;
 }
-
+ 
 h1,
 .h1 {
-    font-size: rem(30px);
-    line-height: rem(37px);
-    font-weight: 600 !important;
+    font-size: rem(25px);
+    line-height: rem(30px);
+    font-weight: 7 00;
     color: $color1;
 
     @include breakpoint-up(md) {
-        font-size: rem(40px);
-        line-height: rem(49px);
+        font-size: rem(35px);
+        line-height: rem(42px);
     }
 }
 
@@ -75,12 +75,12 @@ h2,
 h3,
 .h3,
 .note {
-    font-size: rem(18px);
-    line-height: rem(22px);
-
+    font-size: rem(16px);
+    line-height: rem(19.2px);
+    font-weight: 700;
     @include breakpoint-up(md) {
-        font-size: rem(24px);
-        line-height: rem(29px);
+        font-size: rem(26px);
+        line-height: rem(31.2px);
     }
 }
 

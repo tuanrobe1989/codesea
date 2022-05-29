@@ -167,4 +167,26 @@ jQuery(document).ready(function ($) {
             }
         });
     }
+
+    if (jQuery('#experts').length > 0) {
+        $('#experts').owlCarousel({
+            lazyLoad: true,
+            nav:false,
+            // center:true,
+            // autoWidth:true,
+            margin: 16,
+            loop: true,
+            mouseDrag: true,
+            dots:true,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,                
+                },
+                767:{
+                    items:3,                
+                },
+            }
+        });
+    }
 });

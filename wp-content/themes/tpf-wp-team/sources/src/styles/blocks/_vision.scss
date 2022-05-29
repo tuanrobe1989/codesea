@@ -1,0 +1,25 @@
+.vision {
+  margin-bottom: 3rem;
+  @include breakpoint-up(md) {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+  }
+  &__container {
+
+  }
+  &__contentWrapper{
+
+  }
+  &__imgWrapper{
+
+  }
+  &__descWrapper{
+    strong {
+      font-weight: 700;
+    }
+    > h3 {
+      color:$color2;
+    }
+    max-width:478px;
+  }
+}
