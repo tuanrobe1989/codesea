@@ -48,12 +48,12 @@ h1,
     color: $color1;
 
     @include breakpoint-down(md) {
-        font-size: rem(25);
+        font-size: rem(25px);
         line-height: rem(30px);
     }
 
     @include breakpoint-up(md) {
-        font-size: rem(35x);
+        font-size: rem(35px);
         line-height: rem(42px);
     }
 }
@@ -104,7 +104,7 @@ h4,
     }
 
     @include breakpoint-up(md) {
-        font-size: rem(20);
+        font-size: rem(20px);
         line-height: rem(24px);
     }
 }
@@ -299,6 +299,12 @@ h5,
     }
 }
 
+.blue{
+    color: $blue !important;
+}
+.pink{
+    color: $pink !important;
+}
 .uppercase {
     text-transform: uppercase;
 }

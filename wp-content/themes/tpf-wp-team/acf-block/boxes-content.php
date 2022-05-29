@@ -19,8 +19,8 @@ $template = array(
                     'className' => 'boxesContent__content__des'
                 ),
                 array(
-                    array('core/paragraph', array(
-                        'placeholder' => __('Nội dung của bạn', 'codesea'),
+                    array('core/heading', array(
+                        'placeholder' => __('Tiêu đề của bạn', 'codesea'),
                     )),
                 )
             ),
@@ -38,22 +38,26 @@ $template = array(
                     array('core/column', array(
                         'className' => 'boxesContent__item'
                     ),array(
-                        array('core/image')
+                        array('core/image'),
+                        array('core/paragraph',array('className' => 'h3 blue'))
                     )),
                     array('core/column', array(
                         'className' => 'boxesContent__item'
                     ),array(
-                        array('core/image')
+                        array('core/image'),
+                        array('core/paragraph',array('className' => 'h3 blue'))
                     )),
                     array('core/column', array(
                         'className' => 'boxesContent__item'
                     ),array(
-                        array('core/image')
+                        array('core/image'),
+                        array('core/paragraph',array('className' => 'h3 blue'))
                     )),
                     array('core/column', array(
                         'className' => 'boxesContent__item'
                     ),array(
-                        array('core/image')
+                        array('core/image'),
+                        array('core/paragraph',array('className' => 'h3 blue'))
                     )),
                 )
             ),
