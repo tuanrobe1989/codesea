@@ -8,7 +8,9 @@
     position: fixed;
     top: 1.4em;
     right: 1rem;
-
+    @include breakpoint-up(md) {
+        display: none;
+    }
     span,
     &::before,
     &::after {

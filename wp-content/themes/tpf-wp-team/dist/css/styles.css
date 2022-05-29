@@ -152,6 +152,11 @@ img:not([src]) {
   top: 1.4em;
   right: 1rem;
 }
+@media (min-width: 992px) {
+  .hamb {
+    display: none;
+  }
+}
 .hamb span, .hamb::before, .hamb::after {
   content: "";
   width: 0.5rem;
