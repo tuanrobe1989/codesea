@@ -4,10 +4,12 @@
 
     @include breakpoint-down(md) {
         padding: 3rem 0;
+        margin-top: 4rem;
     }
 
     @include breakpoint-up(md) {
         padding: 4rem 0;
+        margin-top: 7rem;
     }
 
     &__quoteWrap {
