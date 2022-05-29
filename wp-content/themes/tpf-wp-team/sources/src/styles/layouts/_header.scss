@@ -55,11 +55,11 @@
     left: 0;
     padding: 1rem  0 0 0;
     z-index: 9;
-
+    background-color: $white;
     @include breakpoint-down(md) {
         height: 100%;
         border-bottom: 1px solid $color2;
-        max-height: 60px;
+        max-height: 100px;
         overflow: hidden;
         transition: all 0.3s linear;
     }
@@ -81,6 +81,7 @@
         @include breakpoint-down(md) {
             margin-left: -1rem;
             margin-right: -1rem;
+            margin-top: 2.8rem;
         }
 
         @include breakpoint-up(md) {
@@ -165,19 +166,20 @@
     }
 
     &__hotline {
-        
-        padding: 0.5rem;
         box-sizing: border-box;
         align-self: stretch;
         @include breakpoint-down(md) {
             margin-left: -1rem;
             margin-right: -1rem;
-            background-color: $color6;
+            position: fixed;
+            width: 100%;
+            top: 75px;
             br{
                 display: none;
             }
         }
         @include breakpoint-up(md) {
+            padding: 0.5rem;
             background-color: $color3;
         }
 
@@ -187,7 +189,6 @@
             display: block;
             text-decoration: none;
             padding: 0.5rem 1rem 0.5rem 3rem;
-            border-radius: 10px;
             background-image: url('~images/icon-phone.png');
             background-position: center left 0.8rem;
             background-repeat: no-repeat;
@@ -198,6 +199,7 @@
             }
             @include breakpoint-up(md) {
                 font-size: rem(12px);
+                border-radius: 10px;
             }
 
             tel {
