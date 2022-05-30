@@ -38,26 +38,26 @@ $template = array(
                     array('core/column', array(
                         'className' => 'boxesContent__item'
                     ),array(
-                        array('core/image'),
-                        array('core/paragraph',array('className' => 'h3 blue'))
+                        array('core/image',array('className' => "boxesContent__item--img")),
+                        array('core/paragraph',array('className' => 'h4 blue boxesContent__item--tit'))
                     )),
                     array('core/column', array(
                         'className' => 'boxesContent__item'
                     ),array(
-                        array('core/image'),
-                        array('core/paragraph',array('className' => 'h3 blue'))
+                        array('core/image', array('className' => "boxesContent__item--img")),
+                        array('core/paragraph',array('className' => 'h4 blue boxesContent__item--tit'))
                     )),
                     array('core/column', array(
                         'className' => 'boxesContent__item'
                     ),array(
-                        array('core/image'),
-                        array('core/paragraph',array('className' => 'h3 blue'))
+                        array('core/image', array('className' => "boxesContent__item--img")),
+                        array('core/paragraph',array('className' => 'h4 blue boxesContent__item--tit'))
                     )),
                     array('core/column', array(
                         'className' => 'boxesContent__item'
                     ),array(
-                        array('core/image'),
-                        array('core/paragraph',array('className' => 'h3 blue'))
+                        array('core/image', array('className' => "boxesContent__item--img")),
+                        array('core/paragraph',array('className' => 'h4 blue boxesContent__item--tit'))
                     )),
                 )
             ),

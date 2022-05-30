@@ -100,6 +100,7 @@ h3,
 
 h4,
 .h4 {
+    font-weight: 700;
     @include breakpoint-down(md) {
         font-size: rem(16px);
         line-height: rem(19.2px);
@@ -113,6 +114,7 @@ h4,
 
 h5,
 .h5 {
+    font-weight: 700;
     font-size: rem(15px);
     line-height: rem(22px);
     font-weight: 400 !important;
