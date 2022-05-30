@@ -1,8 +1,10 @@
 <?php
+add_action('admin_enqueue_scripts', 'admin_style');
 function admin_style()
 {
     wp_enqueue_style('admin-styles', get_stylesheet_directory_uri() . '/dist/css/editor.css?' . wp_get_theme()->get('Version'));
 }
+
 add_action('acf/init', 'my_acf_init_block_types');
 function my_acf_init_block_types()
 {

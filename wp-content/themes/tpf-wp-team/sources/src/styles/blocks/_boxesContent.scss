@@ -1,10 +1,29 @@
 .boxesContent{
+    padding: 2rem 0;
+    @include breakpoint-up(md) {
+        padding:  4.5rem 0 3.5rem 0;
+    }
     &__itemsWrap{
         display: flex !important;
         flex-wrap: wrap !important;
         width: 100% !important;
         gap: initial !important;
         justify-content: space-between;
+        margin: 0;
+        position: relative;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: $color5;
+            border-radius: 100%;
+            z-index: 0;
+        }
     }
     &__item{
         flex-basis: 47.5% !important;
@@ -19,5 +38,13 @@
         align-items: center;
         justify-self: center;
         text-align: center;
+        transition: all 0.3s linear;
+        z-index: 1;
+        &--img{
+            margin-bottom: 0.5rem;
+        }
+        &:hover{
+            box-shadow: -4px 4px 8px 3px rgba(235, 31, 72, 0.5);
+        }
     }
 }
