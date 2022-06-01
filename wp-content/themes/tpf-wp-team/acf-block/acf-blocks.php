@@ -102,3 +102,25 @@ function boxesContent()
         ));
     }
 }
+
+add_action('acf/init', 'register_values_block');
+function register_values_block()
+{
+    if (function_exists('acf_register_block_type')) {        
+        acf_register_block_type(array(
+            'name'              => 'values',
+            'title'             => __('Values', 'codesea'),
+            'description'       => __('Values Block Develop By Vegeta.'),
+            'render_template'   => './acf-block/values.php',
+            'category'          => 'formatting',
+            'icon'              => 'tickets-alt',
+            'keywords'          => array('values', 'introduced'),
+            'supports'          => array(
+                'align' => true,
+                'mode' => true,
+                'jsx' => true,
+                'multiple' => true,
+            ),
+        ));
+    }
+}

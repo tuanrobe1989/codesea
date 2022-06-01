@@ -24,10 +24,18 @@ if (!empty($block['align'])) {
                 $image = get_sub_field('image');
                 $title = $image['title'];
                 $description = $image['description'];;
+                $name = get_sub_field('name');
+                $position = get_sub_field('position');
                 $link = get_sub_field('link') ? ' '.get_sub_field('link') : '#';
             ?>
                 <div class="experts__item-<?php echo $i ?> experts__item lazy" <?php echo $data ?>>
-                    <a href="<?php echo $link ?>">
+                    <a href="<?php echo $link ?>" class="experts__item__link">
+                        <span class="experts__item__infoWrapper">
+                            <div>
+                                <strong class="experts__item__name"><?php echo $name ?></strong>
+                                <span class="experts__item__position"><?php echo $position ?></span>
+                            </div>                            
+                        </span>
                         <img src="<?php echo $image['url'] ?>" title="<?php echo $title ?>" alt="<?php echo $description ?>">
                     </a>
                 </div>
