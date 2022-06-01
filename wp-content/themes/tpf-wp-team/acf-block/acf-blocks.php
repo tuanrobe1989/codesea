@@ -102,3 +102,28 @@ function boxesContent()
         ));
     }
 }
+
+add_action('acf/init', 'whyBlock');
+function whyBlock()
+{
+    // Check function exists.
+    if (function_exists('acf_register_block_type')) {
+
+        // register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'whyBlock',
+            'title'             => __('Why Block', 'codesea'),
+            'description'       => __('Why Block Develop By KenLuu.'),
+            'render_template'   => './acf-block/why.php',
+            'category'          => 'formatting',
+            'icon'              => 'tickets-alt',
+            'keywords'          => array('whyBlock'),
+            'supports'          => array(
+                'align' => true,
+                'mode' => true,
+                'jsx' => true,
+                'multiple' => true,
+            ),
+        ));
+    }
+}
