@@ -5,27 +5,44 @@
     @include breakpoint-up(md) {
         padding: 3.5rem 0;
     }
-
+    &__wrap{
+        @include breakpoint-down(md) {
+            gap: 0 !important;
+        }
+    }
     &__item {
         &.thumb {
-            padding-bottom: 3.5rem;
-            min-height: rem(809px);
+            @include breakpoint-down(md) {
+                margin-left: -1rem;
+                margin-right: -1rem;
+            }
+
+            @include breakpoint-up(md) {
+                padding-bottom: 3.5rem;
+                min-height: rem(809px);
+            }
         }
 
         &--img {
-            position: absolute;
-            left: 0;
-            top: 3.5rem;
-            width: 50%;
-            padding-right: 1rem;
+
             box-sizing: border-box;
             display: block;
+            @include breakpoint-down(md) {
+                margin-bottom: 0;
+            }
+            @include breakpoint-up(md) {
+                position: absolute;
+                left: 0;
+                top: 3.5rem;
+                width: 50%;
+                padding-right: 1rem;
+            }
 
             img {
+                max-width: 100%;
+                height: auto;
                 @include breakpoint-up(md) {
                     float: right;
-                    max-width: 100%;
-                    height: auto;
                 }
             }
         }

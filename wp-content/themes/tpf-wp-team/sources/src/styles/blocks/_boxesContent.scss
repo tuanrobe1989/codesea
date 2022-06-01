@@ -1,8 +1,26 @@
 .boxesContent {
-    padding: 2rem 0;
+    @include breakpoint-down(md) {
+        padding: 2rem 0 0 0;
+    }
 
     @include breakpoint-up(md) {
         padding: 4.5rem 0 3.5rem 0;
+    }
+
+    &Wrap {
+        @include breakpoint-down(md) {
+            display: block !important;
+        }
+    }
+
+    &__items {
+        @include breakpoint-down(md) {
+            background-color: $white;
+            margin-left: -1rem !important;
+            margin-right: -1rem !important;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
     }
 
     &__itemsWrap {
@@ -14,6 +32,7 @@
         margin: 0;
         position: relative;
 
+
         &::after {
             content: '';
             display: block;
@@ -24,10 +43,12 @@
             background: $color5;
             border-radius: 100%;
             z-index: 0;
+
             @include breakpoint-down(md) {
                 width: 12rem;
                 height: 12rem;
             }
+
             @include breakpoint-up(md) {
                 width: 50%;
                 height: 50%;
