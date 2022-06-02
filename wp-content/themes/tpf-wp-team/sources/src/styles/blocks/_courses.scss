@@ -1,0 +1,43 @@
+.courses {
+  &__container {
+    padding-top: 2rem;
+    
+    @include breakpoint-up(md) {
+      display: block !important;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+  
+  }
+  &__title {
+    color: $color2;
+    text-align: center;
+    @include breakpoint-up(md) {
+      padding-bottom: 2.5rem;
+      max-width: 750px;
+      margin:0 auto !important;       
+    }
+  }
+  @include breakpoint-up(md) {
+  &__list {
+    flex-wrap: wrap !important;
+    gap: 0 !important;
+    justify-content: center;
+    max-width: 920px;
+    margin: 0 auto !important;
+  }
+  &__item {
+    width: 50% !important;
+    flex-basis:auto !important;
+  }
+  &__item__itemImg {
+    width: 436px;
+    height: 293px;
+    &::nth-child(1) {
+      margin-left: auto;
+    }
+  }
+  }
+  
+
+}

@@ -2,7 +2,8 @@
 add_action('admin_enqueue_scripts', 'admin_style');
 function admin_style()
 {
-    wp_enqueue_style('admin-styles', get_stylesheet_directory_uri() . '/dist/css/editor.css?' . wp_get_theme()->get('Version'));
+    $editor_style_file_time = filemtime( get_template_directory() . '/dist/css/editor.css' );
+    wp_enqueue_style('admin-styles', get_stylesheet_directory_uri() . '/dist/css/editor.css?' . $editor_style_file_time);
 }
 
 add_action('acf/init', 'my_acf_init_block_types');
@@ -31,8 +32,7 @@ function my_acf_init_block_types()
 add_action('acf/init', 'register_experts_slider_block');
 function register_experts_slider_block()
 {
-    if (function_exists('acf_register_block_type')) {
-        // register a testimonial block.
+    if (function_exists('acf_register_block_type')) {        
         acf_register_block_type(array(
             'name'              => 'experts',
             'title'             => __('Experts Gallery', 'codesea'),
@@ -41,6 +41,28 @@ function register_experts_slider_block()
             'category'          => 'formatting',
             'icon'              => 'tickets-alt',
             'keywords'          => array('slider', 'images'),
+            'supports'          => array(
+                'align' => true,
+                'mode' => true,
+                'jsx' => true,
+                'multiple' => true,
+            ),
+        ));
+    }
+}
+
+add_action('acf/init', 'register_courses_boxes_block');
+function register_courses_boxes_block()
+{
+    if (function_exists('acf_register_block_type')) {        
+        acf_register_block_type(array(
+            'name'              => 'courses',
+            'title'             => __('Courses Boxes', 'codesea'),
+            'description'       => __('Courses Blocks Develop By Vegeta.'),
+            'render_template'   => './acf-block/courses.php',
+            'category'          => 'formatting',
+            'icon'              => 'tickets-alt',
+            'keywords'          => array('courses'),
             'supports'          => array(
                 'align' => true,
                 'mode' => true,
