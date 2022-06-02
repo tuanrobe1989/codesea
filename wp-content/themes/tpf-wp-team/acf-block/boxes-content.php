@@ -6,7 +6,6 @@ if (!empty($block['className'])) {
 if (!empty($block['align'])) {
     $className .= ' align' . $block['align'];
 }
-
 $template = array(
     array('core/columns', array(
             'className' => 'boxesContentWrap',
@@ -68,13 +67,15 @@ $template = array(
 $allowed_blocks = array('core/columns', 'core/column', 'core/image', 'core/paragraph', 'core/heading');
 
 $background_image = get_field('background_image');
+$background_color = get_field('background_color');
+
 $no_image = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
 
-$background_color = get_field('background_color');
+
 
 
 ?>
-<div id="boxesContent-<?php echo $block['id'] ?>" class="boxesContent<?php if($className ) echo ' '. $className ?>" style="background-color:<?php echo $background_color ?>">
+<div id="boxesContent-<?php echo $block['id'] ?>" class="boxesContent lazy<?php if($className ) echo ' '. $className ?>" style="background-color:<?php echo $background_color ?>">
     <div class="container">
         <InnerBlocks template="<?php echo esc_attr(wp_json_encode($template)); ?>" allowedBlocks="<?php echo esc_attr(wp_json_encode($allowed_blocks)) ?>" />
     </div>
