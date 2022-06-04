@@ -261,3 +261,28 @@ function typeLearn()
         ));
     }
 }
+
+add_action('acf/init', 'contactBlock');
+function contactBlock()
+{
+    // Check function exists.
+    if (function_exists('acf_register_block_type')) {
+
+        // register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'contact',
+            'title'             => __('Contact Block', 'codesea'),
+            'description'       => __('Contact Block Develop By KenLuu.'),
+            'render_template'   => './acf-block/contact.php',
+            'category'          => 'formatting',
+            'icon'              => 'tickets-alt',
+            'keywords'          => array('contact'),
+            'supports'          => array(
+                'align' => true,
+                'mode' => true,
+                'jsx' => true,
+                'multiple' => true,
+            ),
+        ));
+    }
+}

@@ -140,8 +140,8 @@ jQuery(document).ready(function ($) {
             .append(jQuery("<style type='text/css'>  .label{color: red !important}  </style>"));
     });
 
-    if (jQuery('#courseGallery').length > 0) {
-        $('#courseGallery').owlCarousel({
+    if (jQuery('.courseGallery').length > 0) {
+        $('.courseGallery').owlCarousel({
             lazyLoad: true,
             nav:true,
             // center:true,
@@ -168,8 +168,8 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    if (jQuery('#experts').length > 0) {
-        $('#experts').owlCarousel({
+    if (jQuery('.experts').length > 0) {
+        $('.experts').owlCarousel({
             lazyLoad: true,
             nav:false,
             // center:true,

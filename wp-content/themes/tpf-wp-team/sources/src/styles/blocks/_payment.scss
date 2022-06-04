@@ -1,57 +1,35 @@
 .payment {
   &__container {
-    padding-bottom:0.2rem;
-    @include breakpoint-up(md) {
-      padding-bottom:3rem;
-    }
+    max-width: rem(780px) !important;
   }
-  &__title {
-    color: $color2;
-    text-align: center;
-    padding-bottom: 2rem;
+
+  &__tit {
+    display: table;
+    margin: 0 auto 2rem auto;
+
     &::after {
       content: '';
-      display: block;
-      width: 81px;
-      height:3px;
+
+      width: 50%;
       background-color: $color1;
-      position: relative;
-      left:50%;
-      bottom: -8px;
-      transform: translateX(-50%);
+      margin: 1rem auto 0 auto;
+      display: block;
+
       @include breakpoint-up(md) {
-        width: 168px;
-        height:7px;
-        bottom: -14px;
+        height: 7px;
+      }
+
+      @include breakpoint-down(md) {
+        height: 3px;
       }
     }
   }
-  &__desc {
-    text-align: center;
-    padding: 0 0 1rem 0;
-    max-width: 286px;
-    margin-left: auto;
-    margin-right: auto;
-    @include breakpoint-up(md) {
-      max-width: 740px;
-      padding: 0 0 2rem 0;
-    }
-  }
-  &__imgWrapper {
 
-    @include breakpoint-up(md) {
-      justify-content: center;
-    }
-    .wp-block-image {
-      margin-bottom: 0;
-    }
-  }
+  &__thumbs {
+    margin-top: 2rem;
 
-  &__imgLeft {
-    img {
-      display:block;
-      margin-left:auto;
-    }    
+    @include breakpoint-down(md) {
+      gap: 0 !important;
+    }
   }
 }
-

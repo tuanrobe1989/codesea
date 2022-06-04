@@ -17,7 +17,7 @@ if (!empty($block['align'])) {
     <?php
     if (have_rows('expert_list')) :
     ?>
-        <div id="experts" class="owl-carousel owl-theme">
+        <div class="owl-carousel owl-theme experts">
             <?php
             $i = 0;
             while (have_rows('expert_list')) : the_row(); $i++;
