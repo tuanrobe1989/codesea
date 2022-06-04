@@ -1,66 +1,113 @@
 .experts {
   margin-top: 1rem;
-  margin-bottom:100px;
+  margin-bottom: 100px;
+
   @include breakpoint-up(md) {
     margin-top: 3rem;
   }
 
-  &__container {
+  &__container {}
 
-  }
   &__innerWrapper {
-    > div {
+    >div {
       display: flex;
       justify-content: space-between;
       color: $color1;
       margin-bottom: 1rem;
+
       @include breakpoint-up(md) {
         margin-bottom: 2.5rem;
       }
     }
   }
+
   &__title {
     text-transform: uppercase;
-
   }
-  &__button {
 
-    > a {
+  &__button {
+    >a {
       background-color: $white;
       color: $color4;
       text-transform: uppercase;
       font-size: 12px;
-      line-height:34px;
+      line-height: 34px;
       border: 2px solid $color2;
-      border-radius:1px;
-      width:104px;
-      height:34px;
-      padding:0;
+      border-radius: 1px;
+      width: 104px;
+      height: 34px;
+      padding: 0;
+      @include transition_default(0.3s);
+      &:hover {
+        background-color: $color2;
+      }
+
       @include breakpoint-up(md) {
-        width:166px;
-        height:56px;
+        width: 166px;
+        height: 56px;
         font-size: 16px;
-        line-height:56px;
+        line-height: 56px;
       }
     }
   }
-  &__slider {
 
-  }
+  &__slider {}
+
   &__item {
+    position: relative;
+    &__link {
+      &:hover {
+        
+        .experts__item {
+          &__infoWrapper {
+            background-color: $color2;
+          }
+          &__name,
+          &__position {
+            color: $white;
+          }
+        }
+      }
+    }
+    &__infoWrapper {
+      position: absolute;
+      left: 0;
+      bottom: 2rem;
+      padding-left:2rem;
+      background-color: $white;
+      width: 80%;
+      height: 18%;
+      border: 2px solid $color2;
+      display: flex;
+      align-items: center;
+      @include transition_default(0.3s);
+    }
 
+    &__name {
+      display: block;
+      font-weight:700;
+      color:$color1;
+      text-transform: uppercase;
+    }
+
+    &__position {
+      font-weight:400;
+      font-size: rem(12px);
+    }
   }
 }
 
 #experts {
   .owl-dots {
-    padding-top:1.5rem;
+    padding-top: 1.5rem;
+
     button {
       span {
-        width:16px;
-        height:16px;
+        width: 16px;
+        height: 16px;
       }
     }
+
     .active {
       span {
         background-color: $color2;
