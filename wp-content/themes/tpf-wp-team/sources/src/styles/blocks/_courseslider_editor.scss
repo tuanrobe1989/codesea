@@ -1,0 +1,12 @@
+.courseGallery{
+    display: flex;
+    flex-wrap: wrap;
+    &__item{
+        @include breakpoint-down(md){
+            flex-basis: 33.333%;
+        }
+        @include breakpoint-up(md){
+            flex-basis: 20%;
+        }
+    } 
+}
