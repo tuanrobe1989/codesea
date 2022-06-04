@@ -1,0 +1,80 @@
+.tuition {
+  margin-bottom: 4rem;
+  &__container {
+    @include breakpoint-down (md) {
+      padding: 0 !important;
+    }
+  }
+
+  &__title {
+    color:$color2;
+    text-transform:uppercase;
+    text-align:center;
+    margin-bottom: 0.5rem;
+  }
+
+  &__heading {
+    text-align: center;
+    @include breakpoint-up(md) {
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  &__columns {
+    gap: 1rem !important;
+  }
+
+  &__column {
+    background-color: $color5;
+    &:nth-child(2) {
+      background-color: $color2;      
+    }
+    padding: 0 1.5rem;
+    @include breakpoint-up (md) {
+      padding: 1.1rem 2rem;
+    }
+  }
+
+  &__column__desc {
+    color:$white;
+    text-transform:uppercase;
+    
+  }
+
+  &__column__desc--1 {
+    font-weight: 400;
+    font-size: rem(12px);
+    @include breakpoint-up(md) {
+      font-size: rem(23px);
+      line-height: rem(27.6px)
+    }
+  }
+
+  &__column__desc--2 {
+    font-weight: 700;
+    font-size: rem(17px);
+    padding-left: 1rem;    
+    strong {
+      font-size: rem(40px);
+    }
+
+    @include breakpoint-up(md) {
+      font-size: rem(33px);
+      
+      strong {
+        font-size: rem(62px);
+        line-height: rem(74.4px)
+      }
+    }
+  }
+
+  &__column__desc--3 {
+    font-weight: 400;
+    font-size: rem(18px);
+    text-decoration: line-through;
+    padding-left: 5rem;
+    @include breakpoint-up(md) {
+      font-size: rem(33px);
+    }
+  }
+}
