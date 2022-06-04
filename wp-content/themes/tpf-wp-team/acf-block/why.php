@@ -21,13 +21,13 @@ $template = array(
     ))
 );
 
-$allowed_blocks = array('core/columns', 'core/column', 'core/image', 'core/paragraph', 'core/heading');
+// $allowed_blocks = array('core/columns', 'core/column', 'core/image', 'core/paragraph', 'core/heading');
 $no_image = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
 
 ?>
 
 <div id="whyBlock-<?php echo $block['id'] ?>" class="whyBlock<?php if($className ) echo ' '. $className ?>">
     <div class="container">
-        <InnerBlocks template="<?php echo esc_attr(wp_json_encode($template)); ?>" allowedBlocks="<?php echo esc_attr(wp_json_encode($allowed_blocks)) ?>" />
+        <InnerBlocks template="<?php echo esc_attr(wp_json_encode($template)); ?>" allowedBlocks="all" />
     </div>
 </div>

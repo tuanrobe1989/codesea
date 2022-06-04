@@ -209,81 +209,20 @@ h5,
     }
 }
 
-
-/*COMMON*/
-.common {
-    &__paddingTopBottomNormal {
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
-
+.padding {
+    &__topPc0 {
         @include breakpoint-up(md) {
-            padding-top: 1.2rem;
-            padding-bottom: 1.2rem;
+            padding-top: 0;
         }
     }
 
-    &__paddingTopBottom {
-        padding-top: rem(32px);
-        padding-bottom: rem(32px);
-        margin-bottom: 0;
-
+    &__bottomPc0 {
         @include breakpoint-up(md) {
-            padding-top: rem(60px);
-            padding-bottom: rem(60px);
-        }
-
-        .wp-block-columns {
-            margin-bottom: 0;
-
-            >.wp-block-column {
-
-                h1,
-                h2,
-                h3,
-                h4,
-                h5,
-                h6,
-                .h1,
-                .h2,
-                .h3,
-                .h4,
-                .h5,
-                .h6 {
-                    margin-top: 0;
-                }
-            }
+            padding-bottom: 0;
         }
     }
 
-    &__paddingTop {
-        padding-top: rem(32px);
-
-        @include breakpoint-up(md) {
-            padding-top: rem(60px);
-        }
-    }
-
-    &__paddingbottom {
-        padding-bottom: rem(32px);
-
-        @include breakpoint-up(md) {
-            padding-bottom: rem(60px);
-        }
-    }
 }
-
-.paddingLeftDefault {
-    padding-left: rem(54px);
-
-    @include breakpoint-up(md) {
-        padding-left: rem(94px);
-    }
-
-    @include breakpoint-up(lg) {
-        padding-left: rem(114px);
-    }
-}
-
 
 .gocenter {
     margin-left: auto;
@@ -318,16 +257,18 @@ h5,
 
 ol {
     counter-reset: my-awesome-counter;
-    list-style-type: none;
+    list-style-type: none !important;
 
     li {
         position: relative;
         counter-increment: my-awesome-counter;
         text-align: justify;
         margin: 1rem 0;
+
         @include breakpoint-down(md) {
             padding-left: 3.5rem;
         }
+
         @include breakpoint-up(md) {
             padding-left: 5.75rem;
         }

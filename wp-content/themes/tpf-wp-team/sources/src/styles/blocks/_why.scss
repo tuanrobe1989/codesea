@@ -6,6 +6,7 @@
         padding: 3.5rem 0;
     }
     &__wrap{
+        margin-bottom: 0;
         @include breakpoint-down(md) {
             gap: 0 !important;
         }
@@ -18,7 +19,7 @@
             }
 
             @include breakpoint-up(md) {
-                padding-bottom: 3.5rem;
+                // padding-bottom: 3.5rem;
                 min-height: rem(809px);
             }
         }
@@ -43,6 +44,7 @@
                 height: auto;
                 @include breakpoint-up(md) {
                     float: right;
+                    margin-right: 1rem;
                 }
             }
         }

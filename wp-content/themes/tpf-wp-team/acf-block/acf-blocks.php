@@ -127,3 +127,28 @@ function whyBlock()
         ));
     }
 }
+
+add_action('acf/init', 'typeLearn');
+function typeLearn()
+{
+    // Check function exists.
+    if (function_exists('acf_register_block_type')) {
+
+        // register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'typeLearn',
+            'title'             => __('Type Learn Block', 'codesea'),
+            'description'       => __('Type Learn Block Develop By KenLuu.'),
+            'render_template'   => './acf-block/typeLearn.php',
+            'category'          => 'formatting',
+            'icon'              => 'tickets-alt',
+            'keywords'          => array('typeLearn'),
+            'supports'          => array(
+                'align' => true,
+                'mode' => true,
+                'jsx' => true,
+                'multiple' => true,
+            ),
+        ));
+    }
+}

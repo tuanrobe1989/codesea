@@ -1,0 +1,88 @@
+.typeLearn {
+    background-color: $white;
+    position: relative;
+
+    @include breakpoint-up(md) {
+        padding: 3.5rem 0;
+    }
+    @include breakpoint-down(md) {
+        padding-top: 2.5rem;
+    }
+    &__wrap{
+        @include breakpoint-down(md) {
+            gap: 0 !important;
+        }
+    }
+    &__item {
+        &.info{
+            max-width: rem(560px);
+            @include breakpoint-down(md) {
+                order:1;
+            }
+        }
+        &.thumb {
+            @include breakpoint-down(md) {
+                margin-left: -1rem;
+                margin-right: -1rem;
+                order: 0;
+            }
+
+            @include breakpoint-up(md) {
+                min-height: rem(581px);
+            }
+        }
+
+        &--tit{
+            @include breakpoint-down(md) {
+                position: absolute;
+                top: 0;
+            }
+        }
+
+        &--img {
+            box-sizing: border-box;
+            display: block;
+            @include breakpoint-down(md) {
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+            }
+            @include breakpoint-up(md) {
+                position: absolute;
+                right: 0;
+                top: -3.5rem;
+                width: 50%;
+                padding-right: 1rem;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                @include breakpoint-up(md) {
+                    float: left;
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        &__des {
+            margin-top: 2rem;
+        }
+        .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{
+            @include breakpoint-down(md) {
+                flex-basis: 46% !important;
+            }
+        }
+        &__thumbs{
+            margin-top: 2rem;
+            .wp-block-image{
+                img{
+                    border-radius: 100%;
+                }
+            }
+            figcaption{
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
