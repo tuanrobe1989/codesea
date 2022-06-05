@@ -57,7 +57,8 @@
     }
 
     .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
-        @include breakpoint-down(md) {
+        
+        @include breakpoint-down(lg) {
             flex-basis: 47.5% !important;
         }
     }
