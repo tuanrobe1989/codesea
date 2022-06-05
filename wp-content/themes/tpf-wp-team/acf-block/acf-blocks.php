@@ -6,11 +6,76 @@ function admin_style()
     wp_enqueue_style('admin-styles', get_stylesheet_directory_uri() . '/dist/css/editor.css?' . $editor_style_file_time);
 }
 
+add_action('acf/init', 'register_detail_course_block');
+function register_detail_course_block()
+{
+    if (function_exists('acf_register_block_type')) {
+        acf_register_block_type(array(
+            'name'              => 'goals',
+            'title'             => __('Goals', 'codesea'),
+            'description'       => __('Goals Blocks Develop By KenLuu.'),
+            'render_template'   => './acf-block/goals.php',
+            'category'          => 'formatting',
+            'icon'              => 'tickets-alt',
+            'keywords'          => array('goals'),
+            'supports'          => array(
+                'align' => true,
+                'mode' => true,
+                'jsx' => true,
+                'multiple' => true,
+            ),
+        ));
+    }
+}
+
+add_action('acf/init', 'register_course_content_block');
+function register_course_content_block()
+{
+    if (function_exists('acf_register_block_type')) {
+        acf_register_block_type(array(
+            'name'              => 'course-contents',
+            'title'             => __('Course Contents', 'codesea'),
+            'description'       => __('Course Contents Blocks Develop By KenLuu.'),
+            'render_template'   => './acf-block/course-contents.php',
+            'category'          => 'formatting',
+            'icon'              => 'tickets-alt',
+            'keywords'          => array('course-contents'),
+            'supports'          => array(
+                'align' => true,
+                'mode' => true,
+                'jsx' => true,
+                'multiple' => true,
+            ),
+        ));
+    }
+}
+
+add_action('acf/init', 'register_tuition_block');
+function register_tuition_block()
+{
+    if (function_exists('acf_register_block_type')) {
+        acf_register_block_type(array(
+            'name'              => 'tuition',
+            'title'             => __('Tuition', 'codesea'),
+            'description'       => __('Tuition Blocks Develop By KenLuu.'),
+            'render_template'   => './acf-block/tuition.php',
+            'category'          => 'formatting',
+            'icon'              => 'tickets-alt',
+            'keywords'          => array('tuition'),
+            'supports'          => array(
+                'align' => true,
+                'mode' => true,
+                'jsx' => true,
+                'multiple' => true,
+            ),
+        ));
+    }
+}
+
 add_action('acf/init', 'my_acf_init_block_types');
 function my_acf_init_block_types()
 {
     if (function_exists('acf_register_block_type')) {
-        // register a testimonial block.
         acf_register_block_type(array(
             'name'              => 'courseSlider',
             'title'             => __('Courses Gallery', 'codesea'),
