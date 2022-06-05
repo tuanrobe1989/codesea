@@ -1,6 +1,6 @@
 <?php
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'experts';
+$className = '';
 
 $id = 'experts-' . $block['id'];
 
