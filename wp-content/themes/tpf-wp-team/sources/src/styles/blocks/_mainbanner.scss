@@ -3,10 +3,10 @@
     position: relative;
     overflow: hidden;
     @include breakpoint-down(md) {
-        padding: 9rem 0 1.5rem 0;
+        padding: 10rem 0 1.5rem 0;
     }
     @include breakpoint-up(md) {
-        padding: 9rem 0 3rem 0;
+        padding: 10rem 0 3rem 0;
     }
     &::after {
 
