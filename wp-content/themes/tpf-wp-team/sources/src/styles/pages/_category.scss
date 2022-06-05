@@ -10,11 +10,28 @@
     position:relative;
   }
   &__item__thumbnailWrapper {
-    
+    display: block;
 
   }
-  &__item__thumbnail {}
-  &__item__contentWrapper {}
+  &__item__thumbnail {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    img {
+      display:block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }    
+  }
+  &__item__contentWrapper {
+    position:relative;
+    z-index: 2;
+    margin-top: 170px;
+    background-color: $color2;
+  }
   &__item__title {}
   &__item__excerpt {}
   &__item__moreBtn {}
