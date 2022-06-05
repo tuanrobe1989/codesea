@@ -343,3 +343,54 @@ ol {
     }
 
 }
+
+input,
+textarea {
+  background: white;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border: 0;
+  margin: 0.5rem 0;
+  border: 2px solid $white;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+}
+
+input[type="submit"] {
+  background: $color2;
+  color: $white;
+  font-weight: 700;
+  display: block;
+  width: auto;
+  padding: 0.7rem 1rem;
+  border: 0;
+
+  @include breakpoint-down(md) {
+    font-size: rem(14px);
+    min-width: rem(105px);
+  }
+
+  @include breakpoint-up(md) {
+    min-width: rem(167px);
+    font-size: rem(26px);
+  }
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $black;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $black;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $black;
+}
