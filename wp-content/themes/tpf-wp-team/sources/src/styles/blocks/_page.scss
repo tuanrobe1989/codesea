@@ -1,0 +1,10 @@
+.page{
+    &__tit{
+        height: 306px;
+        background-color: $color7;
+        background-image: url(~images/background-page.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: auto 100%;
+    }
+}
