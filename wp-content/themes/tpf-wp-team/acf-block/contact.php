@@ -12,7 +12,9 @@ $template = array(
         array('core/column', array('className' => 'contactBlock__item thumb'), array(
             array('core/image', array('className' => 'contactBlock__item--img')),
         )),
-        array('core/column', array( 'className' => 'contactBlock__item info')),
+        array('core/column', array( 'className' => 'contactBlock__item info'),array(
+            'core/heading', array('className' => 'contactBlock__item--tit') 
+        )),
     ))
 );
 
