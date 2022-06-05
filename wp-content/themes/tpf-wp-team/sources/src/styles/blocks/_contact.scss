@@ -118,28 +118,31 @@
 
   &__wrap {
     margin: 0;
-    gap: 0;
-    
-    @include breakpoint-up(md){
+    gap: 0 !important;
+
+    @include breakpoint-up(md) {
       min-height: rem(780px);
     }
   }
 
   &__item {
-    &--tit{
+    &--tit {
       color: $white;
-      @include breakpoint-down(md){
+
+      @include breakpoint-down(md) {
         position: absolute;
         top: rem(50px);
         right: 1rem;
         font-size: rem(18px);
       }
     }
+
     &--img {
-      @include breakpoint-down(md){
+      @include breakpoint-down(md) {
         margin-bottom: 0;
       }
-      @include breakpoint-up(md){
+
+      @include breakpoint-up(md) {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -149,7 +152,7 @@
         width: 100%;
         max-width: 1680px;
       }
-      
+
 
       img {
         width: auto;
@@ -157,42 +160,56 @@
       }
     }
 
-    &.thumb{
+    &.thumb {
       margin-left: -1rem;
       margin-right: -1rem;
     }
 
     &.info {
       z-index: 2;
-      
+
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       padding-bottom: 2rem;
-      @include breakpoint-up(md){
+
+      @include breakpoint-up(md) {
         position: relative;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        @include breakpoint-down(md) {
+          background-color: $color7;
+        }
       }
 
       input[type="submit"] {
         margin-left: auto;
         margin-right: 0;
-        
+
         box-sizing: border-box;
       }
-      .wpcf7-not-valid-tip{
+
+      .wpcf7-not-valid-tip {
         display: none;
       }
-      .wpcf7-spinner{
+
+      .wpcf7-spinner {
         position: absolute;
         right: 10rem;
         bottom: 3.5rem
       }
-      .wpcf7-not-valid{
+
+      .wpcf7-not-valid {
         border: 2px solid $color2;
-        
+
         border-radius: 5px;
       }
-      .wpcf7-response-output{
+
+      .wpcf7-response-output {
         display: none;
       }
     }
