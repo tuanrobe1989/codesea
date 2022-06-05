@@ -1,5 +1,7 @@
 body.page{
-    padding-top: 8rem;
+    @include breakpoint-down(md) {
+        padding-top: 8rem;
+    }
 }
 .page {
     &__titWrap {
@@ -23,8 +25,13 @@ body.page{
     }
 
     &__tit {
-        margin-top: 1rem;
         margin-bottom: 2rem;
         text-transform: uppercase;
+        @include breakpoint-down(md) {
+            margin-top: 1rem;
+        }
+        @include breakpoint-up(md) {
+            margin-top: 3rem;
+        }
     }
 }
