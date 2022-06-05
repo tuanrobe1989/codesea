@@ -118,23 +118,49 @@
 
   &__wrap {
     margin: 0;
-    gap: 0;
-    min-height: rem(780px);
+    gap: 0 !important;
+    @include breakpoint-down(lg) {
+      flex-direction: column;
+    }
+    @include breakpoint-up(lg) {
+      min-height: rem(780px);
+    }
   }
 
   &__item {
-    &--tit{
+    &--tit {
       color: $white;
+      @include breakpoint-down(sm) {
+        right: 1rem;
+        top: rem(50px);
+        font-size: rem(18px);
+      }
+      @include breakpoint-down(lg) {
+        position: absolute;
+        top: rem(120px);
+        left: 50%;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        
+      }
     }
+
     &--img {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
-      height: 100%;
-      width: 100%;
-      max-width: 1440px;
+      @include breakpoint-down(lg) {
+        margin-bottom: 0;
+      }
+
+      @include breakpoint-up(lg) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 1680px;
+      }
+
 
       img {
         width: auto;
@@ -142,56 +168,58 @@
       }
     }
 
+    &.thumb {
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+
     &.info {
       z-index: 2;
-      position: relative;
+
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      padding-bottom: 2rem;
+
+      @include breakpoint-up(lg) {
+        position: relative;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        @include breakpoint-down(lg) {
+          background-color: $color7;
+        }
+      }
 
       input[type="submit"] {
         margin-left: auto;
         margin-right: 0;
+
+        box-sizing: border-box;
+      }
+
+      .wpcf7-not-valid-tip {
+        display: none;
+      }
+
+      .wpcf7-spinner {
+        position: absolute;
+        right: 10rem;
+        bottom: 3.5rem
+      }
+
+      .wpcf7-not-valid {
+        border: 2px solid $color2;
+
+        border-radius: 5px;
+      }
+
+      .wpcf7-response-output {
+        display: none;
       }
     }
   }
-}
-
-input,
-textarea {
-  background: white;
-  width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  border: 0;
-  margin: 0.5rem 0;
-}
-
-input[type="submit"] {
-  background: $color2;
-  color: $white;
-  font-weight: 700;
-  min-width: rem(167px);
-  display: block;
-  width: auto;
-  font-size: rem(26px);
-  padding: 0.7rem 1rem;
-}
-
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: $black;
-  opacity: 1;
-  /* Firefox */
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: $black;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: $black;
 }

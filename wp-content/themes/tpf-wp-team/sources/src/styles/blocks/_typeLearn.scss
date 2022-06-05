@@ -11,6 +11,7 @@
     &__wrap{
         @include breakpoint-down(md) {
             gap: 0 !important;
+            justify-content: center;
         }
     }
     &__item {
