@@ -234,12 +234,20 @@ input[type="submit"] {
   background: $color2;
   color: $white;
   font-weight: 700;
-  min-width: rem(167px);
   display: block;
   width: auto;
-  font-size: rem(26px);
   padding: 0.7rem 1rem;
   border: 0;
+
+  @include breakpoint-down(md) {
+    font-size: rem(14px);
+    min-width: rem(105px);
+  }
+
+  @include breakpoint-up(md) {
+    min-width: rem(167px);
+    font-size: rem(26px);
+  }
 }
 
 ::placeholder {
