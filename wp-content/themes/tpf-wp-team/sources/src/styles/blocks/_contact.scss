@@ -119,22 +119,37 @@
   &__wrap {
     margin: 0;
     gap: 0;
-    min-height: rem(780px);
+    
+    @include breakpoint-up(md){
+      min-height: rem(780px);
+    }
   }
 
   &__item {
     &--tit{
       color: $white;
+      @include breakpoint-down(md){
+        position: absolute;
+        top: rem(50px);
+        right: 1rem;
+        font-size: rem(18px);
+      }
     }
     &--img {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
-      height: 100%;
-      width: 100%;
-      max-width: 1680px;
+      @include breakpoint-down(md){
+        margin-bottom: 0;
+      }
+      @include breakpoint-up(md){
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 1680px;
+      }
+      
 
       img {
         width: auto;
@@ -142,27 +157,39 @@
       }
     }
 
+    &.thumb{
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+
     &.info {
       z-index: 2;
-      position: relative;
+      
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       padding-bottom: 2rem;
+      @include breakpoint-up(md){
+        position: relative;
+      }
 
       input[type="submit"] {
         margin-left: auto;
         margin-right: 0;
+        
+        box-sizing: border-box;
       }
       .wpcf7-not-valid-tip{
         display: none;
       }
       .wpcf7-spinner{
         position: absolute;
+        right: 10rem;
+        bottom: 3.5rem
       }
       .wpcf7-not-valid{
-        border: 3px solid $color2;
-        box-sizing: border-box;
+        border: 2px solid $color2;
+        
         border-radius: 5px;
       }
       .wpcf7-response-output{
@@ -181,6 +208,9 @@ textarea {
   text-transform: uppercase;
   border: 0;
   margin: 0.5rem 0;
+  border: 2px solid $white;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
 }
 
 input[type="submit"] {
@@ -192,6 +222,7 @@ input[type="submit"] {
   width: auto;
   font-size: rem(26px);
   padding: 0.7rem 1rem;
+  border: 0;
 }
 
 ::placeholder {
