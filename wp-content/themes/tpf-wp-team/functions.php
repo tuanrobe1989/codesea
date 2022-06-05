@@ -36,11 +36,8 @@ function after_setup_theme_func()
 {
     add_theme_support('post-thumbnails');
     add_theme_support('editor-styles');
-    set_post_thumbnail_size('small-thumbnails', 432, 200, true);
-    set_post_thumbnail_size('blog-thumbnails', 432, 270, true);
-    set_post_thumbnail_size('medium-thumbnails', 888, 478, true);
-    set_post_thumbnail_size('large -thumbnails', 1346, 716, true);
-    set_post_thumbnail_size('main-banner', 1920, 644, true);
+    set_post_thumbnail_size('blog-thumbnails', 367, 410, true);
+
 }
 
 //REGISTER MENU
@@ -50,5 +47,18 @@ function register_menu_func()
     register_nav_menu('tpf-footer-nav', __('Footer Menu'));
 }
 add_action('init', 'register_menu_func');
+
+function excerpt($limit)
+{
+	$excerpt = explode(' ', get_the_excerpt(), $limit);
+	if (count($excerpt) >= $limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ", $excerpt) . '...';
+	} else {
+		$excerpt = implode(" ", $excerpt);
+	}
+	$excerpt = preg_replace('`[[^]]*]`', '', $excerpt);
+	return $excerpt;
+}
 
 ?>
