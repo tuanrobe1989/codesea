@@ -51,7 +51,7 @@
     }
 }
 
-body.home {
+body.home,body.sticked {
     .header {
         background-color: $white;
 
@@ -61,9 +61,10 @@ body.home {
             }
         }
     }
+    
 }
 
-body:not(.home) {
+body:not(.home):not(.sticked) {
     .header {
         &__menu {
             @include breakpoint-up(md) {
@@ -82,12 +83,14 @@ body:not(.home) {
     z-index: 9;
 
     @include breakpoint-down(md) {
+        top:0;
         height: 100%;
         border-bottom: 1px solid $color2;
         max-height: 100px;
         overflow: hidden;
         transition: all 0.3s linear;
         padding: 1rem 0 0 0;
+        background: $white;
     }
 
     @include breakpoint-up(md) {

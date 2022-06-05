@@ -28,6 +28,19 @@ tpfObjects.faqItem = function () {
 
 }
 
+tpfObjects.menu = function(){
+    var currentTop;
+    jQuery(window).scroll(function(x){
+        currentTop =  jQuery(window).scrollTop();
+        if(currentTop >= 280){
+            jQuery('body').addClass('sticked');
+        }else{
+            jQuery('body').removeClass('sticked');
+        }
+    })
+}
+
+
 tpfObjects.coverHbsptFormPopups = function () {
     jQuery('.sgpb-popup-overlay').click(function () {
         jQuery('.sgpb-popup-dialog-main-div-wrapper .hs-form-iframe').each(function () {
@@ -118,6 +131,7 @@ function handler(e) {
 jQuery(document).ready(function ($) {
     MatchHeight.init();
     tpfObjects.hamb();
+    tpfObjects.menu();
     tpfObjects.faqItem();
     tpfObjects.tabsContent();
 

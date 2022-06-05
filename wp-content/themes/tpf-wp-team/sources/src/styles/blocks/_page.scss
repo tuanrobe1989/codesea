@@ -1,17 +1,30 @@
-.page{
-    &__titWrap{
-        .container{
+body.page{
+    padding-top: 8rem;
+}
+.page {
+    &__titWrap {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+
+        .container {
             position: relative;
         }
-        height: 306px;
-        background-color: $color7;
-        background-image: url(~images/background-page.png);
-        background-repeat: no-repeat;
-        background-position: right;
-        background-size: auto 100%;
-        
+
+        @include breakpoint-up(md) {
+            height: 306px;
+            background-color: $color7;
+            background-image: url(~images/background-page.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: auto 100%;
+        }
     }
-    &__tit{
-     
+
+    &__tit {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
     }
 }
