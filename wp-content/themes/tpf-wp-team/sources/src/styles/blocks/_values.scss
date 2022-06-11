@@ -1,16 +1,19 @@
 .values {
   background-image: url(~images/intro-bg-mobile.jpg);
   background-repeat: no-repeat;
-  background-position:top left;
+  background-position: top left;
   background-size: cover;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  position:relative;
+  position: relative;
+
+  @include breakpoint-down(md) {
+    padding: 2rem 0;
+  }
+
   @include breakpoint-up(md) {
     margin: 0 auto;
-    padding-top: 28px;
-
+    padding: 3rem 0;
   }
+
   &::after {
     content: "";
     display: block;
@@ -20,19 +23,20 @@
     width: 100%;
     height: 100%;
     background-color: $back_transparent;
-    z-index:0;
+    z-index: 0;
   }
 
   &__container {
-    position:relative;
-    z-index:1;
+    position: relative;
+    z-index: 1;
     display: block !important;
   }
 
   &__title {
     text-transform: uppercase;
     color: $white;
-    margin: 1rem 0 !important;
+    margin: 1rem 0 2rem 0 !important;
+
     @include breakpoint-up(md) {
       text-align: center;
       padding-bottom: 10px;
@@ -41,48 +45,55 @@
 
   &__contentWrapper {
     color: $white;
+
     @include breakpoint-up(md) {
       flex-wrap: wrap !important;
-      gap: 0 !important;      
+      gap: 0 !important;
+      margin-bottom: -1.5rem;
     }
   }
 
   &__content__item {
-    position:relative;
-    padding-left:60px;
+    position: relative;
+    padding-left: 60px;
+
     @include breakpoint-up(md) {
-      width:50%;
+      width: 50%;
       flex-basis: 50% !important;
       flex-grow: 0 !important;
       box-sizing: border-box;
       padding-left: 16%;
       padding-right: 4%;
-      padding-bottom: 4%;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
     }
   }
 
   &__content__itemIcon {
-    position:absolute;
-    top:0;
-    left:0;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 45px;
     height: 45px;
+
     @include breakpoint-up(md) {
       width: 147px;
-      height: 147px;      
+      height: 147px;
     }
   }
 
   &__content__itemTitle {
     color: $color6;
-    margin-top:5px;
+    margin-top: 5px;
   }
 
   &__content__itemList {
     padding-left: 12px;
+
     @include breakpoint-up(md) {
       padding-left: 12px;
     }
+
     li {
       text-align: justify;
       margin-bottom: 10px;
@@ -90,4 +101,3 @@
   }
 
 }
-

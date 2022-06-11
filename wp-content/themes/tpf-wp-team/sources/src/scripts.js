@@ -32,7 +32,7 @@ tpfObjects.menu = function(){
     var currentTop;
     jQuery(window).scroll(function(x){
         currentTop =  jQuery(window).scrollTop();
-        if(currentTop >= 280){
+        if(currentTop >= 60){
             jQuery('body').addClass('sticked');
         }else{
             jQuery('body').removeClass('sticked');

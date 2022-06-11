@@ -260,6 +260,11 @@ h5,
     text-transform: uppercase;
 }
 
+ul{
+    list-style-type: square;
+    margin-left: 0.5rem;
+}
+
 ol {
     counter-reset: my-awesome-counter;
     list-style-type: none !important;
