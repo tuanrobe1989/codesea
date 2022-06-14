@@ -1,0 +1,36 @@
+.prices{
+    &__list{
+        padding: 2rem 0;
+    }
+    &__item{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 2rem 1rem;
+        p{
+            margin: 0;
+            text-transform: uppercase;
+        }
+        &--tit{
+            font-size: rem(23px);
+            line-height: rem(27.6px);
+        }
+        &--salePrice{
+            font-weight: 700;
+            font-size: rem(33px);
+            line-height: rem(39.6px);
+            strong{
+                font-size: rem(62px);
+                line-height: rem(74.4px);
+            }
+        }
+        &--defaultPrice{
+            font-size: rem(33px);
+            line-height: rem(39.6px);
+            text-decoration: line-through;
+            font-weight: 300 !important;
+        }
+    }
+}

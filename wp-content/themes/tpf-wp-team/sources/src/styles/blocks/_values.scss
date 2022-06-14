@@ -37,7 +37,7 @@
     color: $white;
     margin: 1rem 0 2rem 0 !important;
 
-    @include breakpoint-up(md) {
+    @include breakpoint-up(sm) {
       text-align: center;
       padding-bottom: 10px;
     }
@@ -46,22 +46,32 @@
   &__contentWrapper {
     color: $white;
 
-    @include breakpoint-up(md) {
+    @include breakpoint-up(sm) {
       flex-wrap: wrap !important;
-      gap: 0 !important;
+      gap: 2rem !important;
       margin-bottom: -1.5rem;
     }
+    
   }
 
   &__content__item {
     position: relative;
-    padding-left: 60px;
-
-    @include breakpoint-up(md) {
-      width: 50%;
-      flex-basis: 50% !important;
+    
+    @include breakpoint-down(sm) {
+      
+    }
+    @include breakpoint-up(sm) {
+      width: 46% ;
+      flex-basis: 46% !important;
       flex-grow: 0 !important;
       box-sizing: border-box;
+    }
+    @include breakpoint-down(md) {
+      padding-left: rem(60px);
+    }
+    @include breakpoint-up(lg) {
+      width: 48% ;
+      flex-basis: 48% !important;
       padding-left: 16%;
       padding-right: 4%;
       padding-top: 1.5rem;

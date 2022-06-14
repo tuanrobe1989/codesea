@@ -29,17 +29,18 @@ a {
 }
 
 /* HEADING */
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-weight: 400;
+    font-weight: 700;
     margin: rem(15px) 0;
 }
 
 strong {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 h1,
@@ -210,12 +211,17 @@ h5,
 }
 
 .padding {
+    &__top0{
+        padding-top: 0;
+    }
     &__topPc0 {
         @include breakpoint-up(md) {
             padding-top: 0;
         }
     }
-
+    &__bottom0{
+        padding-bottom: 0;
+    }
     &__bottomPc0 {
         @include breakpoint-up(md) {
             padding-bottom: 0;
@@ -223,12 +229,20 @@ h5,
     }
 
     &__normal{
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        @include breakpoint-down(md) {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        @include breakpoint-up(md) {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
     }
 
 }
-
+.wp-block-columns {
+    margin: 0;
+}
 .gocenter {
     margin-left: auto;
     margin-right: auto;
@@ -251,13 +265,28 @@ h5,
 .blue {
     color: $blue !important;
 }
-
+.bgBlue {
+    background-color: $blue !important;
+    color: $white;
+}
 .pink {
     color: $pink !important;
+}
+.bgPink {
+    background-color: $pink !important;
+    color: $white;
 }
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.green{
+    color: $color5;
+}
+.bgGreen{
+    background-color: $color5;
+    color: $white;
 }
 
 ul{
@@ -397,4 +426,34 @@ input[type="submit"] {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: $black;
+}
+
+.owl-theme{
+    .owl-nav{
+        position: absolute;
+        top: 25%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        button{
+            width: 2.5rem;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            display: block !important;
+            border-radius: 50% !important;
+            background-color: $gray_transparent !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            span{
+                color: $gray_transparent2 !important;
+                font-size:  2.5rem;
+                position: relative;
+                top: 1px;
+            }
+        }
+    }
+    .owl-dots{
+        padding: 1rem 0;
+    }
 }

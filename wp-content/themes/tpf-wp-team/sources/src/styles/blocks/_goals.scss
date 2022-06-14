@@ -1,177 +1,165 @@
 .goals {
-  &__container {
-    margin-bottom: 3rem;
-    @include breakpoint-up(md) {
-      flex-direction: column !important;
-      gap: 0 !important;
-
-    }
-  }
-
-  &__heading {
-    text-align: center;
-
-    strong {
-      font-weight: 700
+  &__target {
+    &s {
+      @include breakpoint-up(md) {
+        padding: rem(45px) 0;
+      }
     }
 
-    @include breakpoint-up(md) {
-      margin-bottom: 0.6rem !important;
-    }
-  }
-
-  &__title {
-    width: 100%;
-    text-align: center;
-    color: $color2;
-    text-transform: uppercase;
-
-    @include breakpoint-up(md) {
-      margin-bottom: 2rem !important;
-    }
-  }
-
-  &__itemList {
-    gap: 0 !important;
-    margin-bottom: 2rem !important;
-  }
-
-  &__item {
-
-    &__img {
-      text-align: center;
-
-      img {
-        max-width: 156px;
-
-        @include breakpoint-up(md) {
-          max-width: 262px;
+    &--img {
+      @include breakpoint-down(sm) {
+        img {
+          max-width: 156px;
         }
-      }
 
-      figcaption {
-        margin-top: 14px;
       }
+    }
+
+    &--tit {
+      color: $color1;
+      font-weight: 700;
 
       strong {
         font-weight: 700;
-        color: $color1;
-        font-size: rem(20px);
-        line-height: rem(24px);
       }
-
     }
 
-    &__desc {
+    &--desc {
+      max-width: rem(268px);
       text-align: center;
-      max-width: 324px;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: rem(16px);
-      line-height: rem(20px);
-      @include breakpoint-up(md) {
-        max-width: 263px;
+      margin: 0 auto;
+    }
+  }
+
+  /*---- TIME ----*/
+  &__time {
+    &Section {
+      padding: 2rem 0;
+
+      @include breakpoint-down(sm) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
       }
     }
-  }
 
-  &__scheduledColumns {
-    position: relative;
-    width: calc(100% + 2rem);
-    min-height: 246px;
-    display: block !important;
-    margin: 0 -1rem !important;
-    @include breakpoint-up(md) {
-      min-height: 420px;
-      width: 100%;
-      margin: 0 !important;
+    &Wrap {
+      position: relative;
+      overflow: hidden;
     }
 
-  }
+    &__img {
+      overflow: hidden;
+      @include breakpoint-down(sm) {
+        min-height: rem(320px);
+      }
+      @include breakpoint-up(sm) {
+        min-height: rem(445px);
+      }
 
-  &__scheduleColumn {}
+      .wp-block-image {
+        position: absolute;
+        width: 100%;
 
-  &__scheduleColumn__imgBg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    max-width: 243px;
-    margin: 0;
-    @include breakpoint-up (md) {
-      max-width: 666px;
-    }
-    img {
-      display: block;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
+        @include breakpoint-down(sm) {
+          height: 100%;
+        }
 
-  &__scheduleColumn__detail {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    max-width: 212px;
-    background-color: $color3;
-    margin: 2rem 0 !important;
-    padding: 0 2rem;
-    box-sizing: border-box;
-    @include breakpoint-up (md) {
-      min-width: 612px;
-      max-height: 254px;
-      height: auto;
-      margin: 84px 0 !important;
-      padding: 27px 85px 42px 85px;
-    }
-
-    p {
-      &:first-of-type {
-        font-weight: 700;
-        strong {          
-          color: $color2;
-          @include breakpoint-down(md) {
-            font-size: rem(20px);
-            line-height: rem(24px);
+        img {
+          @include breakpoint-down(sm) {
+            position: relative;
+            left: -56%;
+            width: auto;
+            max-width: none;
+            height: 100%;
           }
-          @include breakpoint-up(md) {
-            font-size: 2rem;
-            line-height: rem(38.4px);
+
+          @include breakpoint-up(sm) {
+            width: 64%;
+            left: -120%;
+          }
+
+          // width: 100%;
+          // height: auto;
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+
+      @include breakpoint-down(sm) {
+        position: absolute;
+        width: 54%;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+
+      @include breakpoint-up(sm) {
+        position: relative;
+      }
+    }
+
+    &__table {
+      background: $color3;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include breakpoint-down(sm) {
+        padding: 1rem;
+      }
+
+      @include breakpoint-up(sm) {
+        padding: 2rem 1rem;
+      }
+
+      .wp-block-group__inner-container {}
+
+      .wp-block-columns {
+        margin: 0;
+
+        @include breakpoint-down(sm) {
+          gap: 0;
+        }
+
+        @include breakpoint-up(sm) {
+          gap: 1rem;
+        }
+
+        &.month {
+          align-items: flex-end !important;
+
+          @include breakpoint-up(sm) {
+            margin: 1rem 0 0.5rem 0;
+          }
+        }
+
+        &.time {
+          p {
+            margin: 0;
+            line-height: 2;
+          }
+        }
+
+        &:not(.time) {
+          p {
+            line-height: 1;
           }
         }
       }
-      &:last-of-type {
+
+      .wp-block-column {
+        &:first-child {
+          flex-basis: auto;
+          flex-grow: 0;
+        }
 
       }
     }
   }
-
-  &__scheduleColumn__itemTitle {
-    margin-bottom: 0.6rem;
-    color: $color2;
-    @include breakpoint-up(md) {
-      font-size: rem(32px);
-      margin-bottom: rem(28px);
-    }
-  }
-
-  &__scheduleColumn__desc {
-    font-size: rem(14px);
-    line-height: rem(16.8px);
-    color: $color1;
-
-    strong {
-      font-weight: 700;
-    }
-
-    @include breakpoint-up(md) {
-      font-size: rem(20px);
-      line-height: rem(24px);
-    }
-
-  }
-
-
 }

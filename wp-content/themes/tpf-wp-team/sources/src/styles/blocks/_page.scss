@@ -1,14 +1,25 @@
-body.page{
+body.page {
     @include breakpoint-down(md) {
         padding-top: 8rem;
     }
 }
+
 .page {
     &__titWrap {
         display: flex;
         width: 100%;
         flex-direction: column;
         justify-content: center;
+
+        &+div {
+            @include breakpoint-down(md) {
+                padding-bottom: 2.5rem;
+            }
+
+            @include breakpoint-up(md) {
+                padding-top: 5rem;
+            }
+        }
 
         .container {
             position: relative;
@@ -27,9 +38,11 @@ body.page{
     &__tit {
         margin-bottom: 2rem;
         text-transform: uppercase;
+
         @include breakpoint-down(md) {
             margin-top: 1rem;
         }
+
         @include breakpoint-up(md) {
             margin-top: 3rem;
         }
