@@ -1,36 +1,86 @@
-.prices{
-    &__list{
-        padding: 2rem 0;
+.prices {
+    &__list {
+        @include breakpoint-down(sm) {
+            gap: 1rem !important;
+            padding: 1rem 0;
+        }
+        @include breakpoint-up(sm) {
+            padding: 2rem 0;
+        }
     }
-    &__item{
+
+    &__item {
         align-items: center;
         justify-content: center;
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
-        padding: 2rem 1rem;
-        p{
+        
+        @include breakpoint-down(sm) {
+            padding: 1rem;
+        }
+        @include breakpoint-up(sm) {
+            padding: 2rem 1rem;
+        }
+        p {
             margin: 0;
             text-transform: uppercase;
         }
-        &--tit{
-            font-size: rem(23px);
-            line-height: rem(27.6px);
-        }
-        &--salePrice{
-            font-weight: 700;
-            font-size: rem(33px);
-            line-height: rem(39.6px);
-            strong{
-                font-size: rem(62px);
-                line-height: rem(74.4px);
+
+        &--tit {
+            @include breakpoint-down(sm) {
+                font-size: rem(12px);
+                line-height: rem(14.4px);
+                align-self: flex-start;
+            }
+
+            @include breakpoint-up(sm) {
+                font-size: rem(23px);
+                line-height: rem(27.6px);
             }
         }
-        &--defaultPrice{
-            font-size: rem(33px);
-            line-height: rem(39.6px);
+
+        &--salePrice {
+            font-weight: 700;
+
+            @include breakpoint-down(sm) {
+                font-size: rem(18px);
+                line-height: rem(21.6px);
+            }
+
+            @include breakpoint-up(sm) {
+                font-size: rem(33px);
+                line-height: rem(39.6px);
+            }
+
+            strong {
+
+                @include breakpoint-down(sm) {
+                    font-size: rem(40px);
+                    line-height: rem(48px);
+                }
+
+                @include breakpoint-up(sm) {
+                    font-size: rem(62px);
+                    line-height: rem(74.4px);
+                }
+            }
+        }
+
+        &--defaultPrice {
+
             text-decoration: line-through;
             font-weight: 300 !important;
+
+            @include breakpoint-down(sm) {
+                font-size: rem(18px);
+                line-height: rem(21.6px);
+            }
+
+            @include breakpoint-up(sm) {
+                font-size: rem(33px);
+                line-height: rem(39.6px);
+            }
         }
     }
 }
