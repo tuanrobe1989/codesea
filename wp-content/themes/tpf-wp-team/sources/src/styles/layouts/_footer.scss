@@ -162,24 +162,3 @@
         }
     }
 }
-
-.icon {
-    padding-left: 2.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background-position: center left;
-    background-repeat: no-repeat;
-    display: block;
-
-    &--phone {
-        background-image: url(~images/icon-phone-pink.png);
-    }
-
-    &--mail {
-        background-image: url(~images/icon-mail-pink.png);
-    }
-
-    &--address {
-        background-image: url(~images/icon-map-pink.png);
-    }
-}

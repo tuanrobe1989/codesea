@@ -98,3 +98,9 @@ $breakpoints-down: (
     @content;
   }
 }
+
+@mixin breakpoint-betwwen($from, $to) {
+  @media (min-width: map-get($breakpoints-up, $from)) and (min-width: map-get($breakpoints-down, $to)){
+    @content;
+  }
+}

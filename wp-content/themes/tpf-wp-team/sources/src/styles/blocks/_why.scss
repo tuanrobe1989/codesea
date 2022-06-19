@@ -24,33 +24,34 @@
             }
         }
 
-        &--img {
-
-            box-sizing: border-box;
-            display: block;
-            @include breakpoint-down(md) {
-                margin-bottom: 0;
-            }
-            @include breakpoint-up(md) {
-                position: absolute;
-                left: 0;
-                top: 3.5rem;
-                width: 50%;
-                padding-right: 1rem;
-            }
-
-            img {
-                max-width: 100%;
-                height: auto;
-                @include breakpoint-up(md) {
-                    float: right;
-                    margin-right: 1rem;
-                }
-            }
-        }
-
         &__des {
             margin-top: 2rem;
+        }
+    }
+}
+
+body:not(.wp-admin) {
+    .whyBlock__item--img{
+        box-sizing: border-box;
+        display: block;
+        @include breakpoint-down(md) {
+            margin-bottom: 0;
+        }
+        @include breakpoint-up(md) {
+            position: absolute;
+            left: 0;
+            top: 3.5rem;
+            width: 50%;
+            padding-right: 1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            @include breakpoint-up(md) {
+                float: right;
+                margin-right: 1rem;
+            }
         }
     }
 }

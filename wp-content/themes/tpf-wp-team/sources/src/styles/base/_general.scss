@@ -211,28 +211,32 @@ h5,
 }
 
 .padding {
-    &__top0{
+    &__top0 {
         padding-top: 0;
     }
+
     &__topPc0 {
         @include breakpoint-up(md) {
             padding-top: 0;
         }
     }
-    &__bottom0{
+
+    &__bottom0 {
         padding-bottom: 0;
     }
+
     &__bottomPc0 {
         @include breakpoint-up(md) {
             padding-bottom: 0;
         }
     }
 
-    &__normal{
+    &__normal {
         @include breakpoint-down(md) {
             padding-top: 1rem;
             padding-bottom: 1rem;
         }
+
         @include breakpoint-up(md) {
             padding-top: 2rem;
             padding-bottom: 2rem;
@@ -240,9 +244,11 @@ h5,
     }
 
 }
+
 .wp-block-columns {
     margin: 0;
 }
+
 .gocenter {
     margin-left: auto;
     margin-right: auto;
@@ -265,13 +271,29 @@ h5,
 .blue {
     color: $blue !important;
 }
+
 .bgBlue {
     background-color: $blue !important;
     color: $white;
 }
+
 .pink {
     color: $pink !important;
 }
+
+.pink-ball {
+    margin-left: 1.2rem;
+
+    li {
+        margin: 1rem 0;
+    }
+
+    ::marker {
+        color: $pink;
+
+    }
+}
+
 .bgPink {
     background-color: $pink !important;
     color: $white;
@@ -281,15 +303,16 @@ h5,
     text-transform: uppercase;
 }
 
-.green{
+.green {
     color: $color5;
 }
-.bgGreen{
+
+.bgGreen {
     background-color: $color5;
     color: $white;
 }
 
-ul{
+ul {
     list-style-type: square;
     margin-left: 0.5rem;
 }
@@ -372,6 +395,7 @@ ol {
     &__780 {
         max-width: 780px;
     }
+
     &__950 {
         max-width: 950px;
     }
@@ -379,64 +403,79 @@ ol {
 }
 
 input,
-textarea {
-  background: white;
-  width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
-  border: 0;
-  margin: 0.5rem 0;
-  border: 2px solid $white;
-  box-sizing: border-box;
-  transition: all 0.3s linear;
+textarea,
+select {
+    background: white;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 0;
+    margin: 0.5rem 0;
+    border: 2px solid $white;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+
 }
 
 input[type="submit"] {
-  background: $color2;
-  color: $white;
-  font-weight: 700;
-  display: block;
-  width: auto;
-  padding: 0.7rem 1rem;
-  border: 0;
+    background: $color2;
+    color: $white;
+    font-weight: 700;
+    display: block;
+    width: auto;
+    padding: 0.7rem 1rem;
+    border: 0;
 
-  @include breakpoint-down(md) {
-    font-size: rem(14px);
-    min-width: rem(105px);
-  }
+    @include breakpoint-down(md) {
+        font-size: rem(14px);
+        min-width: rem(105px);
+    }
 
-  @include breakpoint-up(md) {
-    min-width: rem(167px);
-    font-size: rem(26px);
-  }
+    @include breakpoint-up(md) {
+        min-width: rem(167px);
+        font-size: rem(26px);
+    }
 }
 
 ::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: $black;
-  opacity: 1;
-  /* Firefox */
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $black;
+    opacity: 1;
+    /* Firefox */
 }
 
 :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: $black;
+    /* Internet Explorer 10-11 */
+    color: $black;
 }
 
 ::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: $black;
+    /* Microsoft Edge */
+    color: $black;
 }
 
-.owl-theme{
-    .owl-nav{
+.titlenote {
+    background-color: $color2;
+    color: $white;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+
+    strong {
+        font-size: 1rem;
+    }
+}
+
+.owl-theme {
+    .owl-nav {
         position: absolute;
         top: 25%;
         left: 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        button{
+
+        button {
             width: 2.5rem;
             height: 2.5rem;
             line-height: 2.5rem;
@@ -445,15 +484,63 @@ input[type="submit"] {
             background-color: $gray_transparent !important;
             margin: 0 !important;
             padding: 0 !important;
-            span{
+
+            span {
                 color: $gray_transparent2 !important;
-                font-size:  2.5rem;
+                font-size: 2.5rem;
                 position: relative;
                 top: 1px;
             }
         }
     }
-    .owl-dots{
+
+    .owl-dots {
         padding: 1rem 0;
+    }
+}
+
+.icon {
+
+
+    background-position: center left;
+    background-repeat: no-repeat;
+    display: block;
+    a{
+        text-decoration: none;
+    }
+    &:not(.icon-yellow) {
+        padding-left: 2.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    &.icon-yellow {
+        padding-left: 4rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    &--phone {
+        background-image: url(~images/icon-phone-pink.png);
+
+        &.icon-yellow {
+            background-image: url(~images/icon-hotline.png);
+        }
+    }
+
+    &--mail {
+        background-image: url(~images/icon-mail-pink.png);
+
+        &.icon-yellow {
+            background-image: url(~images/icon-email.png);
+        }
+    }
+
+    &--address {
+        background-image: url(~images/icon-map-pink.png);
+
+        &.icon-yellow {
+            background-image: url(~images/icon-map.png);
+        }
     }
 }

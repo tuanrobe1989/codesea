@@ -1,5 +1,5 @@
 body.page {
-    @include breakpoint-down(md) {
+    @include breakpoint-down(sm) {
         padding-top: 8rem;
     }
 }
@@ -10,13 +10,15 @@ body.page {
         width: 100%;
         flex-direction: column;
         justify-content: center;
-
+        @include breakpoint-up(sm) {
+            margin-top: rem(115px);
+        }
         &+div {
-            @include breakpoint-down(md) {
+            @include breakpoint-down(sm) {
                 padding-bottom: 2.5rem;
             }
 
-            @include breakpoint-up(md) {
+            @include breakpoint-up(sm) {
                 padding-top: 5rem;
             }
         }
@@ -25,13 +27,20 @@ body.page {
             position: relative;
         }
 
-        @include breakpoint-up(md) {
-            height: 306px;
+        @include breakpoint-up(sm) {
+            height: 240px;
             background-color: $color7;
             background-image: url(~images/background-page.png);
-            background-repeat: no-repeat;
-            background-position: right;
+            background-repeat: no-repeat;   
+        }
+        @include breakpoint-down(md){
             background-size: auto 100%;
+            background-position: center right rem(-280px);
+        }
+        @include breakpoint-up(md){
+            height: 306px;
+            background-size: auto 100%;
+            background-position: right;
         }
     }
 
@@ -39,7 +48,7 @@ body.page {
         margin-bottom: 2rem;
         text-transform: uppercase;
 
-        @include breakpoint-down(md) {
+        @include breakpoint-down(sm) {
             margin-top: 1rem;
         }
 

@@ -33,8 +33,11 @@
                 line-height: rem(14.4px);
                 align-self: flex-start;
             }
-
             @include breakpoint-up(sm) {
+                font-size: rem(20px);
+                line-height: rem(25.6px);
+            }
+            @include breakpoint-up(md) {
                 font-size: rem(23px);
                 line-height: rem(27.6px);
             }
@@ -47,8 +50,11 @@
                 font-size: rem(18px);
                 line-height: rem(21.6px);
             }
-
             @include breakpoint-up(sm) {
+                font-size: rem(24px);
+                line-height: rem(37.6px);
+            }
+            @include breakpoint-up(md) {
                 font-size: rem(33px);
                 line-height: rem(39.6px);
             }
@@ -59,8 +65,11 @@
                     font-size: rem(40px);
                     line-height: rem(48px);
                 }
-
                 @include breakpoint-up(sm) {
+                    font-size: rem(40px);
+                    line-height: rem(70.4px);
+                }
+                @include breakpoint-up(md) {
                     font-size: rem(62px);
                     line-height: rem(74.4px);
                 }
@@ -76,8 +85,11 @@
                 font-size: rem(18px);
                 line-height: rem(21.6px);
             }
-
             @include breakpoint-up(sm) {
+                font-size: rem(26px);
+                line-height: rem(33.6px);
+            }
+            @include breakpoint-up(md) {
                 font-size: rem(33px);
                 line-height: rem(39.6px);
             }

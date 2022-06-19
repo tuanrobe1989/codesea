@@ -93,21 +93,32 @@
       }
     }
 
-    input[type*="submit"] {
-      min-width: 106px;
-      min-height: 34px;
-      background-color: $color2;
-      display: block;
-      margin-left: auto;
-      border: none;
-      color: $white;
-      font-weight: 700;
-    }
+    // input[type*="submit"] {
+    //   min-width: 106px;
+    //   min-height: 34px;
+    //   background-color: $color2;
+    //   display: block;
+    //   margin-left: auto;
+    //   border: none;
+    //   color: $white;
+    //   font-weight: 700;
+    // }
 
     @include breakpoint-up(md) {
       max-width: 100%;
     }
   }
+}
+
+.wpcf7-submit {
+  min-width: 106px;
+  min-height: 34px;
+  background-color: $color2;
+  display: block;
+  margin-left: auto;
+  border: none;
+  color: $white;
+  font-weight: 700;
 }
 
 /*-----------------CONTACT BLOCK--------------------*/
@@ -119,9 +130,11 @@
   &__wrap {
     margin: 0;
     gap: 0 !important;
+
     @include breakpoint-down(lg) {
       flex-direction: column;
     }
+
     @include breakpoint-up(lg) {
       min-height: rem(780px);
     }
@@ -130,19 +143,26 @@
   &__item {
     &--tit {
       color: $white;
-      @include breakpoint-down(sm) {
-        right: 1rem;
-        top: rem(50px);
-        font-size: rem(18px);
-      }
+
       @include breakpoint-down(lg) {
         position: absolute;
         top: rem(120px);
         left: 50%;
         font-size: 1.5rem;
         line-height: 1.4;
-        
+
       }
+
+      @include breakpoint-down(sm) {
+        right: 1rem;
+        top: rem(55px);
+        font-size: rem(18px);
+
+        br {
+          display: none;
+        }
+      }
+
     }
 
     &--img {
@@ -201,25 +221,71 @@
         box-sizing: border-box;
       }
 
-      .wpcf7-not-valid-tip {
-        display: none;
-      }
 
-      .wpcf7-spinner {
-        position: absolute;
-        right: 10rem;
-        bottom: 3.5rem
-      }
+    }
+  }
+}
 
-      .wpcf7-not-valid {
-        border: 2px solid $color2;
+.wpcf7-not-valid-tip {
+  display: none;
+}
 
-        border-radius: 5px;
-      }
+.wpcf7-spinner {
+  position: absolute;
+  right: 10rem;
+  bottom: 3.5rem
+}
 
-      .wpcf7-response-output {
-        display: none;
+.wpcf7-not-valid {
+  border: 2px solid $color2;
+
+  border-radius: 5px;
+}
+
+.wpcf7-response-output {
+  display: none;
+}
+
+/*-----------------REGISTER FROM--------------------*/
+.registerForm {
+  gap: 0 !important;
+  padding-bottom: 6rem !important;
+  &__form {
+    background-color: $color3;
+    padding: 2rem 3rem;
+    position: relative;
+    .form__input,select {
+      text-transform: uppercase;
+    }
+  }
+
+  &__item {
+    &.info {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+      margin-right: -8rem;
+      bottom: -6rem;
+      .wp-block-group__inner-container {
+        >h2 {
+          margin-top: 0;
+        }
       }
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    padding: 3rem;
+    min-height: rem(564px);
+    box-sizing: border-box;
+    background-image: url(~images/register-form-bg.jpg);
+    background-size: cover;
+    position: relative;
+    .wp-block-group__inner-container{
+      max-width: 72%;
+      color: $white
     }
   }
 }

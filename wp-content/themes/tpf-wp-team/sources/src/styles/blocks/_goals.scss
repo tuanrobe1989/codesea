@@ -1,7 +1,7 @@
 .goals {
   &__target {
     &s {
-      @include breakpoint-up(md) {
+      @include breakpoint-up(sm) {
         padding: rem(45px) 0;
       }
     }
@@ -49,10 +49,12 @@
 
     &__img {
       overflow: hidden;
-      @include breakpoint-down(sm) {
+
+      @include breakpoint-down(md) {
         min-height: rem(320px);
       }
-      @include breakpoint-up(sm) {
+
+      @include breakpoint-up(md) {
         min-height: rem(445px);
       }
 
@@ -162,24 +164,48 @@
       }
     }
   }
-  &__courseInfo{
-    &Wrap{
-      .wp-block-columns{
+
+  &__courseInfo {
+    &Wrap {
+      .wp-block-group__inner-container{
+        > h2,h3{
+          @include breakpoint-down(md) {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+      .wp-block-columns {
         background-color: $color3;
         margin: 0.5rem 0;
-        padding: 1rem ;
         gap: 0;
+
+        @include breakpoint-down(md) {
+          flex-wrap: nowrap !important;
+          >.wp-block-column {
+            flex-basis: fit-content !important;
+          }
+        }
+
+        @include breakpoint-up(md) {
+          padding: 1rem;
+        }
       }
     }
-    &__item{
+
+    &__item {
       padding: 1.2rem 1.2rem 2.2rem 1.2rem;
       box-sizing: border-box;
       position: relative;
-      &.num{
-        flex-basis: auto !important;
-        p{
-          width: rem(120px);
-          height: rem(120px);
+
+
+
+      &.num {
+
+        @include breakpoint-down(md) {
+          flex-basis: auto !important;
+        }
+
+        p {
           display: block;
           color: $white;
           background-color: $color5;
@@ -188,42 +214,64 @@
           align-items: center;
           justify-content: center;
           flex-direction: column;
-          font-size: rem(20px);
           line-height: 1;
           font-weight: 700;
           box-sizing: border-box;
           padding-top: 0.5rem;
-          strong{
+
+          @include breakpoint-down(md) {
+            width: rem(72px);
+            height: rem(72px);
+            font-size: rem(12px);
+          }
+
+          @include breakpoint-up(md) {
+            width: rem(120px);
+            height: rem(120px);
+            font-size: rem(20px);
+          }
+
+          strong {
             color: $white;
-            font-size: rem(60px);
             line-height: 1;
             margin-top: rem(5px);
+
+            @include breakpoint-down(md) {
+              font-size: rem(30px);
+            }
+
+            @include breakpoint-up(md) {
+              font-size: rem(60px);
+            }
           }
         }
       }
-      &.content{
-        flex-basis: 100% !important;
-        padding-left: 2rem;
 
+      &.content {
+        @include breakpoint-up(md) {
+          flex-basis: 100% !important;
+          padding-left: 2rem;
+        }
       }
-      &--tit{
 
-      }
-      &--des{
+      &--tit {}
 
-      }
-      &--button{
+      &--des {}
+
+      &--button {
         display: block;
         // margin: 1rem 0 0 auto !important;
-        position: absolute;
-        bottom: 0.5rem;
-        right: 2rem;
-        .wp-block-button__link{
-         
-         
+
+        @include breakpoint-up(md) {
+          position: absolute;
+          bottom: 0.5rem;
+          right: 2rem;
         }
-        &.small{
-          .wp-block-button__link{
+
+        .wp-block-button__link {}
+
+        &.small {
+          .wp-block-button__link {
             border-color: $color2;
             border-radius: 0;
             padding: 0.2rem 1rem;

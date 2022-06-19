@@ -38,6 +38,7 @@ tpfObjects.goalTargets = function(){
         items:1,
         nav:true,  
         dots: false, 
+        margin: 32,
         responsive:{
             0:{
                 items:1
