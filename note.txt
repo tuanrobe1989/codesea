@@ -1,6 +1,9 @@
 codesea_super_admin
 614iFXPie4W5FvrO!f
 
+-------------- LIVE SITE ---------------
+https://codesea.academy/17c4520f6cfd1ab53d8745e84681eb49
+
 
 -------------- BLOCK PROPERTIES ---------------
 https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/
@@ -8,3 +11,13 @@ https://developer.wordpress.org/block-editor/reference-guides/block-api/block-su
 
 -------------- BLOCK TYPE ---------------
 https://developer.wordpress.org/block-editor/reference-guides/core-blocks/
+
+
+-------------- FTP ---------------
+ftp://31.220.110.245
+ftp://codesea.academy 
+21
+u300465166
+19899891@KEN_ken
+
+

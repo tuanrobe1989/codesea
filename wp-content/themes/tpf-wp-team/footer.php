@@ -15,8 +15,8 @@
     <div class="container">
         <div class="footer__row">
             <div class="footer__row__item footer__itemLeft">
-                <a href="<?php echo BLOG_URL ?>" class="footer__itemLeft__logoWrap">
-                    <img src="<?php echo SOURCE_URL ?>/images/logo.png" width="170" height="186" alt="<?php echo BLOG_NAME ?>" title="<?php echo BLOG_NAME ?>" class="footer__itemLeft__logo" />
+                <a href="<?php echo BLOG_HOME ?>" class="footer__itemLeft__logoWrap">
+                    <img src="<?php echo noimage ?>" data-src="<?php echo SOURCE_URL ?>/images/logo.png" width="170" height="186" alt="<?php echo BLOG_NAME ?>" title="<?php echo BLOG_NAME ?>" class="lazy footer__itemLeft__logo" />
                 </a>
                 <div class="footer__itemLeft__row">
                     <ul class="footer__itemLeft__item left">
@@ -39,6 +39,13 @@
                 </a>
             </div>
         </div>
+    </div>
+    <div class="container">
+        <ul class="footer__socials">
+            <li><strong><?php _e('Follow Us') ?></strong></li>
+            <li><a href="https://www.facebook.com/codeseaacademy/" target="_blank"><img src="<?php echo noimage ?>" data-src="<?php echo SOURCE_URL ?>/images/icon-facebook.png" alt="facebook - <?php echo BLOG_NAME ?>" class="lazy footer__socials--icon"/></a></li>
+            <li><a href="https://www.linkedin.com/groups/14086782/" target="_blank"><img src="<?php echo noimage ?>" data-src="<?php echo SOURCE_URL ?>/images/icon-linkedin.png" alt="linkedin - <?php echo BLOG_NAME ?>" class="lazy footer__socials--icon"/></a></li>
+        </ul>
     </div>
 </footer>
 <?php wp_footer(); ?>

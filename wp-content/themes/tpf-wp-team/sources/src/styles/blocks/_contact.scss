@@ -249,13 +249,36 @@
 /*-----------------REGISTER FROM--------------------*/
 .registerForm {
   gap: 0 !important;
-  padding-bottom: 6rem !important;
+  @include breakpoint-up(sm) {
+    padding-bottom: 6rem !important;
+  }
+  &Wrap{
+    @include breakpoint-down(sm) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
   &__form {
     background-color: $color3;
-    padding: 2rem 3rem;
+    
     position: relative;
+    @include breakpoint-down(sm) {
+      padding: 1rem 2rem;
+    }
+    @include breakpoint-up(sm) {
+      padding: 2rem 3rem;
+    }
     .form__input,select {
       text-transform: uppercase;
+    }
+    .wpcf7-spinner{
+      @include breakpoint-down(sm) {
+        bottom:2.2rem !important;
+      }
+      @include breakpoint-up(sm) {
+      
+        right: 14rem;
+      }
     }
   }
 
@@ -265,8 +288,10 @@
       align-items: flex-start;
       justify-content: center;
       position: relative;
-      margin-right: -8rem;
+      @include breakpoint-up(sm) {
+        margin-right: -8rem;
       bottom: -6rem;
+      }
       .wp-block-group__inner-container {
         >h2 {
           margin-top: 0;
@@ -277,15 +302,28 @@
 
   &__bg {
     width: 100%;
-    padding: 3rem;
-    min-height: rem(564px);
+    
     box-sizing: border-box;
     background-image: url(~images/register-form-bg.jpg);
     background-size: cover;
     position: relative;
-    .wp-block-group__inner-container{
-      max-width: 72%;
-      color: $white
+    @include breakpoint-down(sm) {
+      padding: 2rem;
     }
+    @include breakpoint-up(sm) {
+      min-height: rem(564px);
+      padding: 3rem;
+    }
+    .wp-block-group__inner-container{
+      color: $white;
+      @include breakpoint-up(sm) {
+        max-width: 72%;
+      }
+    }
+    .icon--phone{
+      font-size: 24px;
+      font-weight: 700;
+    }
+   
   }
 }

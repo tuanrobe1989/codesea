@@ -2,7 +2,7 @@
 add_action('admin_enqueue_scripts', 'admin_style');
 function admin_style()
 {
-    $editor_style_file_time = filemtime( get_template_directory() . '/dist/css/editor.css' );
+    $editor_style_file_time = filemtime(get_template_directory() . '/dist/css/editor.css');
     wp_enqueue_style('admin-styles', get_stylesheet_directory_uri() . '/dist/css/editor.css?' . $editor_style_file_time);
 }
 
@@ -97,7 +97,7 @@ function my_acf_init_block_types()
 add_action('acf/init', 'register_experts_slider_block');
 function register_experts_slider_block()
 {
-    if (function_exists('acf_register_block_type')) {        
+    if (function_exists('acf_register_block_type')) {
         acf_register_block_type(array(
             'name'              => 'experts',
             'title'             => __('Experts Gallery', 'codesea'),
@@ -119,7 +119,7 @@ function register_experts_slider_block()
 add_action('acf/init', 'register_courses_boxes_block');
 function register_courses_boxes_block()
 {
-    if (function_exists('acf_register_block_type')) {        
+    if (function_exists('acf_register_block_type')) {
         acf_register_block_type(array(
             'name'              => 'courses',
             'title'             => __('Courses Boxes', 'codesea'),
@@ -193,7 +193,7 @@ function boxesContent()
 add_action('acf/init', 'register_values_block');
 function register_values_block()
 {
-    if (function_exists('acf_register_block_type')) {        
+    if (function_exists('acf_register_block_type')) {
         acf_register_block_type(array(
             'name'              => 'values',
             'title'             => __('Values', 'codesea'),

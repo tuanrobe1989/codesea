@@ -119,7 +119,7 @@ h5,
     font-weight: 700;
     font-size: rem(15px);
     line-height: rem(22px);
-    font-weight: 400 !important;
+    font-weight: 700 !important;
 
     @include breakpoint-up(md) {
         font-size: rem(16px);
@@ -156,47 +156,6 @@ h5,
         color: $color1;
     }
 }
-
-
-
-/* MARGIN TOP */
-.mt {
-    &_0 {
-        margin-top: 0 !important;
-    }
-
-    &_05 {
-        margin-top: 0.5rem !important;
-    }
-
-    &_1 {
-        margin-top: 1rem !important;
-    }
-
-    &_2 {
-        margin-top: 2rem !important;
-    }
-}
-
-/* MARGIN BOTTOM */
-.mb {
-    &_0 {
-        margin-bottom: 0 !important;
-    }
-
-    &_05 {
-        margin-bottom: 0.5rem !important;
-    }
-
-    &_1 {
-        margin-bottom: 1 !important;
-    }
-
-    &_2 {
-        margin-bottom: 2 !important;
-    }
-}
-
 
 /* BACKGROUND */
 .bg {
@@ -317,7 +276,8 @@ ul {
     margin-left: 0.5rem;
 }
 
-ol {
+
+ol:not(.wp-paginate) {
     counter-reset: my-awesome-counter;
     list-style-type: none !important;
 
@@ -402,40 +362,7 @@ ol {
 
 }
 
-input,
-textarea,
-select {
-    background: white;
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-    border: 0;
-    margin: 0.5rem 0;
-    border: 2px solid $white;
-    box-sizing: border-box;
-    transition: all 0.3s linear;
 
-}
-
-input[type="submit"] {
-    background: $color2;
-    color: $white;
-    font-weight: 700;
-    display: block;
-    width: auto;
-    padding: 0.7rem 1rem;
-    border: 0;
-
-    @include breakpoint-down(md) {
-        font-size: rem(14px);
-        min-width: rem(105px);
-    }
-
-    @include breakpoint-up(md) {
-        min-width: rem(167px);
-        font-size: rem(26px);
-    }
-}
 
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -500,14 +427,14 @@ input[type="submit"] {
 }
 
 .icon {
-
-
     background-position: center left;
     background-repeat: no-repeat;
     display: block;
-    a{
+
+    a {
         text-decoration: none;
     }
+
     &:not(.icon-yellow) {
         padding-left: 2.5rem;
         padding-top: 0.5rem;
@@ -544,3 +471,4 @@ input[type="submit"] {
         }
     }
 }
+

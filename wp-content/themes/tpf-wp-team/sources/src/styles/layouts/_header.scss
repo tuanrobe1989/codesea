@@ -79,9 +79,8 @@ body:not(.home):not(.sticked) {
     position: fixed;
     width: 100%;
     left: 0;
-
     z-index: 9;
-
+    transition: all 0.3s linear;
     @include breakpoint-down(md) {
         top:0;
         height: 100%;
@@ -144,7 +143,8 @@ body:not(.home):not(.sticked) {
 
     &__menu {
         list-style-type: none;
-
+        margin-left: 0;
+        transition: all 0.3s linear;
         @include breakpoint-up(md) {
 
             display: flex;
@@ -215,6 +215,7 @@ body:not(.home):not(.sticked) {
             position: fixed;
             width: 100%;
             top: 75px;
+            border-bottom: 1px solid $white;
 
             br {
                 display: none;

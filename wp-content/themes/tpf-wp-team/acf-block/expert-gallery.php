@@ -36,7 +36,7 @@ if (!empty($block['align'])) {
                                 <span class="experts__item__position"><?php echo $position ?></span>
                             </div>                            
                         </span>
-                        <img src="<?php echo $image['url'] ?>" title="<?php echo $title ?>" alt="<?php echo $description ?>">
+                        <img src="<?php echo noimage ?>" data-src="<?php echo $image['url'] ?>" title="<?php echo $title ?>" alt="<?php echo $description ?>" class="owl-lazy">
                     </a>
                 </div>
             <?php

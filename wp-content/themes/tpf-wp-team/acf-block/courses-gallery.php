@@ -28,7 +28,7 @@ if (!empty($block['align'])) {
             ?>
                 <div class="courseGallery__item-<?php echo $i ?> courseGallery__item lazy" <?php echo $data ?>>
                     <a href="<?php echo $link ?>">
-                        <img src="<?php echo $image['url'] ?>" title="<?php echo $title ?>" alt="<?php echo $description ?>">
+                        <img src="<?php echo noimage ?>" data-src="<?php echo $image['url'] ?>" title="<?php echo $title ?>" alt="<?php echo $description ?>">
                     </a>
                 </div>
             <?php
