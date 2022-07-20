@@ -125,3 +125,9 @@ function related_posts_function($atts)
 add_shortcode('related-posts', 'related_posts_function');
 
 remove_filter( 'comment_form_defaults', array('Forms', 'filter_defaults'), );
+
+//COVER HEADER ADD FAVICON
+add_action('wp_head','add_favicon_func',1);
+function add_favicon_func(){
+    echo '<link rel="icon" type="image/png" href="https://codesea.academy/wp-content/uploads/2022/07/288736139_553248753115993_2038440868775416643_n-1.png"/>';
+}

@@ -237,13 +237,24 @@
 }
 
 .wpcf7-not-valid {
-  border: 2px solid $color2;
+  border: 3px solid $color2 !important;
 
   border-radius: 5px;
 }
 
 .wpcf7-response-output {
-  display: none;
+  // display: none;
+  margin: 0 !important;
+  border-color: red !important;
+  text-align: center !important;
+  padding: 0.5rem !important;
+}
+.home .wpcf7-response-output {
+  margin-bottom: -10px !important;
+  text-transform: uppercase;
+  font-size: rem(12px);
+  border-radius: 10px;
+  letter-spacing: 0.5px;
 }
 
 /*-----------------REGISTER FROM--------------------*/

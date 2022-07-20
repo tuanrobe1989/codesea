@@ -19,456 +19,471 @@ body {
     }
 }
 
-/* GENERAL */
-p {
-    margin: rem(10px) 0;
-}
+body:not(.wp-admin),
+.block-editor {
 
-a {
-    color: inherit;
-}
-
-/* HEADING */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-    margin: rem(15px) 0;
-}
-
-strong {
-    font-weight: 700;
-}
-
-h1,
-.h1 {
-    font-size: rem(35px);
-    line-height: rem(42px);
-    font-weight: 700 !important;
-    color: $color1;
-
-    @include breakpoint-down(md) {
-        font-size: rem(25px);
-        line-height: rem(30px);
+    /* GENERAL */
+    p {
+        margin: rem(10px) 0;
     }
 
-    @include breakpoint-up(md) {
+    a {
+        color: inherit;
+    }
+
+    /* HEADING */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+        margin: rem(15px) 0;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    h1,
+    .h1 {
         font-size: rem(35px);
         line-height: rem(42px);
-    }
-}
+        font-weight: 700 !important;
+        color: $color1;
 
-.wp-block-cover {
-    h1:not(.has-text-color) {
-        color: $white;
-    }
-}
+        @include breakpoint-down(md) {
+            font-size: rem(25px);
+            line-height: rem(30px);
+        }
 
-h2,
-.h2 {
-    font-weight: 700;
-
-    @include breakpoint-down(md) {
-        font-size: rem(20px);
-        line-height: rem(24px);
+        @include breakpoint-up(md) {
+            font-size: rem(35px);
+            line-height: rem(42px);
+        }
     }
 
-    @include breakpoint-up(md) {
-        font-size: 2rem;
-        line-height: rem(38.4px);
-    }
-}
-
-
-h3,
-.h3,
-.note {
-    font-weight: 700;
-
-    @include breakpoint-down(md) {
-        font-size: rem(16px);
-        line-height: rem(19.2px);
+    .wp-block-cover {
+        h1:not(.has-text-color) {
+            color: $white;
+        }
     }
 
-    @include breakpoint-up(md) {
-        font-size: rem(26px);
-        line-height: rem(31.2px);
-    }
-}
+    h2,
+    .h2 {
+        font-weight: 700;
 
-h4,
-.h4 {
-    font-weight: 700;
+        @include breakpoint-down(md) {
+            font-size: rem(20px);
+            line-height: rem(24px);
+        }
 
-    @include breakpoint-down(md) {
-        font-size: rem(16px);
-        line-height: rem(19.2px);
-    }
-
-    @include breakpoint-up(md) {
-        font-size: rem(20px);
-        line-height: rem(24px);
-    }
-}
-
-h5,
-.h5 {
-    font-weight: 700;
-    font-size: rem(15px);
-    line-height: rem(22px);
-    font-weight: 700 !important;
-
-    @include breakpoint-up(md) {
-        font-size: rem(16px);
-        line-height: rem(24px);
-    }
-}
-
-.wp-block-post-title {
-    a {
-        color: inherit !important;
-        text-decoration: none;
-    }
-}
-
-.color_main {
-    color: $color1;
-}
-
-.color_main_inside {
-    a {
-        color: $color1 !important;
-        text-decoration: none;
-    }
-}
-
-
-//COLORS
-.text {
-    &__white {
-        color: $white;
+        @include breakpoint-up(md) {
+            font-size: 2rem;
+            line-height: rem(38.4px);
+        }
     }
 
-    &__main {
+
+    h3,
+    .h3,
+    .note {
+        font-weight: 700;
+
+        @include breakpoint-down(md) {
+            font-size: rem(16px);
+            line-height: rem(19.2px);
+        }
+
+        @include breakpoint-up(md) {
+            font-size: rem(26px);
+            line-height: rem(31.2px);
+        }
+    }
+
+    h4,
+    .h4 {
+        font-weight: 700;
+
+        @include breakpoint-down(md) {
+            font-size: rem(16px);
+            line-height: rem(19.2px);
+        }
+
+        @include breakpoint-up(md) {
+            font-size: rem(20px);
+            line-height: rem(24px);
+        }
+    }
+
+    h5,
+    .h5 {
+        font-weight: 700;
+        font-size: rem(15px);
+        line-height: rem(22px);
+        font-weight: 700 !important;
+
+        @include breakpoint-up(md) {
+            font-size: rem(16px);
+            line-height: rem(24px);
+        }
+    }
+
+    .wp-block-post-title {
+        a {
+            color: inherit !important;
+            text-decoration: none;
+        }
+    }
+
+    .color_main {
         color: $color1;
     }
-}
 
-/* BACKGROUND */
-.bg {
-    &__blue {
-        background-color: $blue;
-        color: $white;
+    .color_main_inside {
+        a {
+            color: $color1 !important;
+            text-decoration: none;
+        }
     }
 
-    &__grey {
-        background-color: $grey;
-    }
-}
 
-.padding {
-    &__top0 {
-        padding-top: 0;
+    //COLORS
+    .text {
+        &__white {
+            color: $white;
+        }
+
+        &__main {
+            color: $color1;
+        }
     }
 
-    &__topPc0 {
-        @include breakpoint-up(md) {
+    /* BACKGROUND */
+    .bg {
+        &__blue {
+            background-color: $blue;
+            color: $white;
+        }
+
+        &__grey {
+            background-color: $grey;
+        }
+    }
+
+    .padding {
+        &__top0 {
             padding-top: 0;
         }
-    }
 
-    &__bottom0 {
-        padding-bottom: 0;
-    }
+        &__topPc0 {
+            @include breakpoint-up(md) {
+                padding-top: 0;
+            }
+        }
 
-    &__bottomPc0 {
-        @include breakpoint-up(md) {
+        &__bottom0 {
             padding-bottom: 0;
         }
-    }
 
-    &__normal {
-        @include breakpoint-down(md) {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-
-        @include breakpoint-up(md) {
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-        }
-    }
-
-}
-
-.wp-block-columns {
-    margin: 0;
-}
-
-.gocenter {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.keepPadding {
-    background: red;
-
-    @include breakpoint-down(md) {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    @include breakpoint-up(md) {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
-
-.blue {
-    color: $blue !important;
-}
-
-.bgBlue {
-    background-color: $blue !important;
-    color: $white;
-}
-
-.pink {
-    color: $pink !important;
-}
-
-.pink-ball {
-    margin-left: 1.2rem;
-
-    li {
-        margin: 1rem 0;
-    }
-
-    ::marker {
-        color: $pink;
-
-    }
-}
-
-.bgPink {
-    background-color: $pink !important;
-    color: $white;
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-.green {
-    color: $color5;
-}
-
-.bgGreen {
-    background-color: $color5;
-    color: $white;
-}
-
-ul {
-    list-style-type: square;
-    margin-left: 0.5rem;
-}
-
-
-ol:not(.wp-paginate) {
-    counter-reset: my-awesome-counter;
-    list-style-type: none !important;
-
-    li {
-        position: relative;
-        counter-increment: my-awesome-counter;
-        text-align: justify;
-        margin: 1rem 0;
-
-        @include breakpoint-down(md) {
-            padding-left: 3.5rem;
-        }
-
-        @include breakpoint-up(md) {
-            padding-left: 5.75rem;
-        }
-
-        &:nth-child(4n + 1) {
-            &:before {
-                background: $color6;
+        &__bottomPc0 {
+            @include breakpoint-up(md) {
+                padding-bottom: 0;
             }
         }
 
-        &:nth-child(4n + 2) {
-            &:before {
-                background: $color5;
-            }
-        }
-
-        &:nth-child(4n + 3) {
-            &:before {
-                background: $color1;
-            }
-        }
-
-        &:nth-child(4n + 4) {
-            &:before {
-                background: $color2;
-            }
-        }
-
-        &:before {
-            content: counter(my-awesome-counter);
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            border-radius: 100%;
-            text-align: center;
-            color: $white;
-
+        &__normal {
             @include breakpoint-down(md) {
-                width: rem(42px);
-                height: rem(42px);
-                line-height: rem(42px);
-                font-size: rem(20px);
+                padding-top: 1rem;
+                padding-bottom: 1rem;
             }
 
             @include breakpoint-up(md) {
-                font-size: 2rem;
-                width: rem(68px);
-                height: rem(68px);
-                line-height: rem(68px);
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+        }
+
+    }
+
+    .wp-block-columns {
+        margin: 0;
+    }
+
+    .gocenter {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .keepPadding {
+        background: red;
+
+        @include breakpoint-down(md) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @include breakpoint-up(md) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .blue {
+        color: $blue !important;
+    }
+
+    .bgBlue {
+        background-color: $blue !important;
+        color: $white;
+    }
+
+    .pink {
+        color: $pink !important;
+    }
+
+    .pink-ball {
+        margin-left: 1.2rem;
+
+        li {
+            margin: 1rem 0;
+        }
+
+        ::marker {
+            color: $pink;
+
+        }
+    }
+
+    .bgPink {
+        background-color: $pink !important;
+        color: $white;
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+
+    .green {
+        color: $color5;
+    }
+
+    .bgGreen {
+        background-color: $color5;
+        color: $white;
+    }
+
+    header,footer{
+        ul{
+            list-style-type: none !important;
+        }
+    }
+
+    ul {
+        list-style-type: square;
+        margin-left: 0.5rem;
+        li{
+            &::marker{
+                content: '';
             }
         }
     }
-}
 
-.gocenter {
-    margin-right: auto;
-    margin-left: auto;
-}
 
-.mw {
-    &__780 {
-        max-width: 780px;
+    ol:not(.wp-paginate) {
+        counter-reset: my-awesome-counter;
+        list-style-type: none !important;
+
+        li {
+            position: relative;
+            counter-increment: my-awesome-counter;
+            text-align: justify;
+            margin: 1rem 0;
+
+            @include breakpoint-down(md) {
+                padding-left: 3.5rem;
+            }
+
+            @include breakpoint-up(md) {
+                padding-left: 5.75rem;
+            }
+
+            &:nth-child(4n + 1) {
+                &:before {
+                    background: $color6;
+                }
+            }
+
+            &:nth-child(4n + 2) {
+                &:before {
+                    background: $color5;
+                }
+            }
+
+            &:nth-child(4n + 3) {
+                &:before {
+                    background: $color1;
+                }
+            }
+
+            &:nth-child(4n + 4) {
+                &:before {
+                    background: $color2;
+                }
+            }
+
+            &:before {
+                content: counter(my-awesome-counter);
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                border-radius: 100%;
+                text-align: center;
+                color: $white;
+
+                @include breakpoint-down(md) {
+                    width: rem(42px);
+                    height: rem(42px);
+                    line-height: rem(42px);
+                    font-size: rem(20px);
+                }
+
+                @include breakpoint-up(md) {
+                    font-size: 2rem;
+                    width: rem(68px);
+                    height: rem(68px);
+                    line-height: rem(68px);
+                }
+            }
+        }
     }
 
-    &__950 {
-        max-width: 950px;
+    .gocenter {
+        margin-right: auto;
+        margin-left: auto;
     }
 
-}
+    .mw {
+        &__780 {
+            max-width: 780px;
+        }
+
+        &__950 {
+            max-width: 950px;
+        }
+
+    }
 
 
 
-::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $black;
-    opacity: 1;
-    /* Firefox */
-}
+    ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $black;
+        opacity: 1;
+        /* Firefox */
+    }
 
-:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: $black;
-}
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $black;
+    }
 
-::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: $black;
-}
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: $black;
+    }
 
-.titlenote {
-    background-color: $color2;
-    color: $white;
-    padding: 0.7rem 1rem;
-    font-size: 1rem;
-    margin: 1.5rem 0;
-
-    strong {
+    .titlenote {
+        background-color: $color2;
+        color: $white;
+        padding: 0.7rem 1rem;
         font-size: 1rem;
+        margin: 1.5rem 0;
+
+        strong {
+            font-size: 1rem;
+        }
     }
-}
 
-.owl-theme {
-    .owl-nav {
-        position: absolute;
-        top: 25%;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+    .owl-theme {
+        .owl-nav {
+            position: absolute;
+            top: 25%;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
 
-        button {
-            width: 2.5rem;
-            height: 2.5rem;
-            line-height: 2.5rem;
-            display: block !important;
-            border-radius: 50% !important;
-            background-color: $gray_transparent !important;
-            margin: 0 !important;
-            padding: 0 !important;
+            button {
+                width: 2.5rem;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                display: block !important;
+                border-radius: 50% !important;
+                background-color: $gray_transparent !important;
+                margin: 0 !important;
+                padding: 0 !important;
 
-            span {
-                color: $gray_transparent2 !important;
-                font-size: 2.5rem;
-                position: relative;
-                top: 1px;
+                span {
+                    color: $gray_transparent2 !important;
+                    font-size: 2.5rem;
+                    position: relative;
+                    top: -2px;
+                }
+            }
+        }
+
+        .owl-dots {
+            padding: 1rem 0;
+        }
+    }
+
+    .icon {
+        background-position: center left;
+        background-repeat: no-repeat;
+        display: block;
+
+        a {
+            text-decoration: none;
+        }
+
+        &:not(.icon-yellow) {
+            padding-left: 2.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        &.icon-yellow {
+            padding-left: 4rem;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+        }
+
+        &--phone {
+            background-image: url(~images/icon-phone-pink.png);
+
+            &.icon-yellow {
+                background-image: url(~images/icon-hotline.png);
+            }
+        }
+
+        &--mail {
+            background-image: url(~images/icon-mail-pink.png);
+
+            &.icon-yellow {
+                background-image: url(~images/icon-email.png);
+            }
+        }
+
+        &--address {
+            background-image: url(~images/icon-map-pink.png);
+
+            &.icon-yellow {
+                background-image: url(~images/icon-map.png);
             }
         }
     }
 
-    .owl-dots {
-        padding: 1rem 0;
-    }
 }
-
-.icon {
-    background-position: center left;
-    background-repeat: no-repeat;
-    display: block;
-
-    a {
-        text-decoration: none;
-    }
-
-    &:not(.icon-yellow) {
-        padding-left: 2.5rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
-
-    &.icon-yellow {
-        padding-left: 4rem;
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
-    }
-
-    &--phone {
-        background-image: url(~images/icon-phone-pink.png);
-
-        &.icon-yellow {
-            background-image: url(~images/icon-hotline.png);
-        }
-    }
-
-    &--mail {
-        background-image: url(~images/icon-mail-pink.png);
-
-        &.icon-yellow {
-            background-image: url(~images/icon-email.png);
-        }
-    }
-
-    &--address {
-        background-image: url(~images/icon-map-pink.png);
-
-        &.icon-yellow {
-            background-image: url(~images/icon-map.png);
-        }
-    }
-}
-
